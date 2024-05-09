@@ -20,6 +20,12 @@
 		EC7A026A2BECC0E20022C058 /* VoteAverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02692BECC0E20022C058 /* VoteAverageView.swift */; };
 		EC7A026C2BECC1FE0022C058 /* TrendFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A026B2BECC1FE0022C058 /* TrendFooterView.swift */; };
 		EC7A026E2BECC2460022C058 /* TrendCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A026D2BECC2460022C058 /* TrendCellView.swift */; };
+		EC7A02722BECC5EE0022C058 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02712BECC5EE0022C058 /* TargetType.swift */; };
+		EC7A02742BECC7490022C058 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EC7A02732BECC7490022C058 /* .gitignore */; };
+		EC7A02762BECC75B0022C058 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02752BECC75B0022C058 /* APIKey.swift */; };
+		EC7A02782BECCAE80022C058 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02772BECCAE80022C058 /* HTTPMethod.swift */; };
+		EC7A027A2BECCB370022C058 /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02792BECCB370022C058 /* HTTPHeader.swift */; };
+		EC7A027D2BECCC7C0022C058 /* TrendRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A027C2BECCC7C0022C058 /* TrendRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +62,12 @@
 		EC7A02692BECC0E20022C058 /* VoteAverageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteAverageView.swift; sourceTree = "<group>"; };
 		EC7A026B2BECC1FE0022C058 /* TrendFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendFooterView.swift; sourceTree = "<group>"; };
 		EC7A026D2BECC2460022C058 /* TrendCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendCellView.swift; sourceTree = "<group>"; };
+		EC7A02712BECC5EE0022C058 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		EC7A02732BECC7490022C058 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		EC7A02752BECC75B0022C058 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		EC7A02772BECCAE80022C058 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		EC7A02792BECCB370022C058 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
+		EC7A027C2BECCC7C0022C058 /* TrendRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +98,7 @@
 		EC7A02232BECA6DA0022C058 = {
 			isa = PBXGroup;
 			children = (
+				EC7A02732BECC7490022C058 /* .gitignore */,
 				EC7A022E2BECA6DA0022C058 /* TrendingMovie */,
 				EC7A023F2BECA6DD0022C058 /* TrendingMovieTests */,
 				EC7A02492BECA6DD0022C058 /* TrendingMovieUITests */,
@@ -106,6 +119,7 @@
 		EC7A022E2BECA6DA0022C058 /* TrendingMovie */ = {
 			isa = PBXGroup;
 			children = (
+				EC7A02702BECC5D30022C058 /* Network */,
 				EC7A025C2BECA96D0022C058 /* Custom */,
 				EC7A02592BECA6FF0022C058 /* Trend */,
 				EC7A022F2BECA6DA0022C058 /* TrendingMovieApp.swift */,
@@ -167,6 +181,26 @@
 				EC7A02652BECBC3E0022C058 /* TrendHeaderView.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		EC7A02702BECC5D30022C058 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EC7A02752BECC75B0022C058 /* APIKey.swift */,
+				EC7A02772BECCAE80022C058 /* HTTPMethod.swift */,
+				EC7A02792BECCB370022C058 /* HTTPHeader.swift */,
+				EC7A02712BECC5EE0022C058 /* TargetType.swift */,
+				EC7A027B2BECCC6F0022C058 /* Trend */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EC7A027B2BECCC6F0022C058 /* Trend */ = {
+			isa = PBXGroup;
+			children = (
+				EC7A027C2BECCC7C0022C058 /* TrendRouter.swift */,
+			);
+			path = Trend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC7A02372BECA6DD0022C058 /* Preview Assets.xcassets in Resources */,
+				EC7A02742BECC7490022C058 /* .gitignore in Resources */,
 				EC7A02342BECA6DD0022C058 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,9 +334,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7A027A2BECCB370022C058 /* HTTPHeader.swift in Sources */,
 				EC7A02682BECC0950022C058 /* BackDropImageView.swift in Sources */,
 				EC7A02602BECAA2D0022C058 /* ButtonWrapper.swift in Sources */,
 				EC7A026A2BECC0E20022C058 /* VoteAverageView.swift in Sources */,
+				EC7A027D2BECCC7C0022C058 /* TrendRouter.swift in Sources */,
+				EC7A02782BECCAE80022C058 /* HTTPMethod.swift in Sources */,
+				EC7A02722BECC5EE0022C058 /* TargetType.swift in Sources */,
+				EC7A02762BECC75B0022C058 /* APIKey.swift in Sources */,
 				EC7A02662BECBC3E0022C058 /* TrendHeaderView.swift in Sources */,
 				EC7A025B2BECA7120022C058 /* TrendView.swift in Sources */,
 				EC7A026C2BECC1FE0022C058 /* TrendFooterView.swift in Sources */,
