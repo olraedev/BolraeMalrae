@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TrendView: View {
     
-    @StateObject private var viewModel = TrendViewModel()
+    @StateObject var viewModel = TrendViewModel()
     private let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {

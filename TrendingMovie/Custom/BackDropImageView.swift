@@ -16,15 +16,20 @@ struct BackDropImageView: View {
             switch data {
             case .empty:
                 ProgressView()
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 200)
             case .success(let image):
                 image
                     .resizable()
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 200)
             default:
                 Rectangle()
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 200)
                     .background(.white)
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: 200)
     }
     
     init(imageURL: String) {

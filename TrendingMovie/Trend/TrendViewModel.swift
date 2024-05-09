@@ -27,6 +27,7 @@ extension TrendViewModel {
     
     struct Output {
         var trendingMovieList: [TrendingMovieResult] = []
+        var genreList: [Genre] = []
     }
 }
 
@@ -38,6 +39,7 @@ extension TrendViewModel {
                 guard let self = self else { return }
                 Task {
                     try? await self.fetchTrendingMovie()
+                    try? await self.fetchMoviesGenre()
                 }
             }
             .store(in: &cancellable)
@@ -45,9 +47,23 @@ extension TrendViewModel {
     
     private func fetchTrendingMovie() async throws {
         do {
-            output.trendingMovieList = try await NetworkManager.shared.requestToTmdbAPI(model: TrendingMovieModel.self, router: TrendRouter.trendingMovie(timeWindow: .day)).results
+            let data = try await NetworkManager.shared.requestToTmdbAPI(model: TrendingMovieModel.self, router: TrendRouter.trendingMovie(timeWindow: .day)).results
+            await MainActor.run {
+                output.trendingMovieList = data
+            }
         } catch {
             output.trendingMovieList = []
+        }
+    }
+    
+    private func fetchMoviesGenre() async throws {
+        do {
+            let result = try await NetworkManager.shared.requestToTmdbAPI(model: GenreModel.self, router: TrendRouter.genre).genres
+            await MainActor.run {
+                output.genreList = result
+            }
+        } catch {
+            output.genreList = []
         }
     }
 }

@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct TrendHeaderView: View {
+    
     let date: String
-    let genre: String
+    let genre: [Int]
     
     var body: some View {
-        Text(date)
-            .font(.caption)
-            .foregroundStyle(.gray)
-        Text(genre)
-            .bold()
+        VStack(alignment: .leading) {
+            Text(date)
+                .font(.caption)
+                .foregroundStyle(.gray)
+            HStack {
+                ForEach(genre, id: \.self) { genre in
+                    Text("#\(genre)")
+                        .bold()
+                }
+            }
+        }
+        .padding(.leading, 8)
     }
 }

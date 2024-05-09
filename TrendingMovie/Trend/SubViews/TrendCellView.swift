@@ -13,8 +13,8 @@ struct TrendCellView: View {
     
     var body: some View {
         LazyVStack(alignment: .leading) {
-            TrendHeaderView(date: movie.releaseDate, genre: "\(movie.genres[0])")
-            VStack(spacing: 0) {
+            TrendHeaderView(date: movie.releaseDate, genre: movie.genres)
+            LazyVStack(spacing: 0) {
                 ZStack(alignment: .bottomLeading) {
                     BackDropImageView(imageURL: movie.backdrop)
                     VoteAverageView(voteAverage: movie.voteAverage)

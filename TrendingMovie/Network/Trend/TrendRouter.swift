@@ -9,6 +9,7 @@ import Foundation
 
 enum TrendRouter {
     case trendingMovie(timeWindow: TimeWindow)
+    case genre
 }
 
 extension TrendRouter: TargetType {
@@ -23,6 +24,7 @@ extension TrendRouter: TargetType {
     var path: String {
         switch self {
         case .trendingMovie(let timeWindow): "/trending/movie/\(timeWindow.rawValue)"
+        case .genre: "/genre/movie/list"
         }
     }
     

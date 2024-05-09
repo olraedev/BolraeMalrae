@@ -32,6 +32,7 @@
 		EC7A02872BECDAC30022C058 /* TrendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02862BECDAC30022C058 /* TrendViewModel.swift */; };
 		EC7A028A2BECDAEE0022C058 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02892BECDAEE0022C058 /* ViewModelType.swift */; };
 		EC7A028D2BECDC430022C058 /* TrendingMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A028C2BECDC430022C058 /* TrendingMovieModel.swift */; };
+		EC7A028F2BECEDA60022C058 /* GenreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A028E2BECEDA60022C058 /* GenreModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		EC7A02862BECDAC30022C058 /* TrendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewModel.swift; sourceTree = "<group>"; };
 		EC7A02892BECDAEE0022C058 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		EC7A028C2BECDC430022C058 /* TrendingMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovieModel.swift; sourceTree = "<group>"; };
+		EC7A028E2BECEDA60022C058 /* GenreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				EC7A028C2BECDC430022C058 /* TrendingMovieModel.swift */,
+				EC7A028E2BECEDA60022C058 /* GenreModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC7A027A2BECCB370022C058 /* HTTPHeader.swift in Sources */,
+				EC7A028F2BECEDA60022C058 /* GenreModel.swift in Sources */,
 				EC7A02682BECC0950022C058 /* BackDropImageView.swift in Sources */,
 				EC7A02852BECDA470022C058 /* TimeWindow.swift in Sources */,
 				EC7A02602BECAA2D0022C058 /* ButtonWrapper.swift in Sources */,
