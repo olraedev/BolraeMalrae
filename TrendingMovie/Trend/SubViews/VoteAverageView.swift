@@ -1,0 +1,25 @@
+//
+//  VoteAverageView.swift
+//  TrendingMovie
+//
+//  Created by SangRae Kim on 5/9/24.
+//
+
+import SwiftUI
+
+struct VoteAverageView: View {
+    var body: some View {
+        HStack(spacing: 0) {
+            Text("평점")
+                .font(.caption)
+                .padding(.all, 3)
+                .background(.blue)
+                .foregroundStyle(.white)
+            Text("3.3")
+                .font(.caption)
+                .padding(.all, 3)
+                .background(.white)
+        }
+        .offset(x: 16, y: -16)
+    }
+}

@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		EC7A02302BECA6DA0022C058 /* TrendingMovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A022F2BECA6DA0022C058 /* TrendingMovieApp.swift */; };
-		EC7A02322BECA6DA0022C058 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02312BECA6DA0022C058 /* ContentView.swift */; };
 		EC7A02342BECA6DD0022C058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7A02332BECA6DD0022C058 /* Assets.xcassets */; };
 		EC7A02372BECA6DD0022C058 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7A02362BECA6DD0022C058 /* Preview Assets.xcassets */; };
 		EC7A02412BECA6DD0022C058 /* TrendingMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02402BECA6DD0022C058 /* TrendingMovieTests.swift */; };
 		EC7A024B2BECA6DD0022C058 /* TrendingMovieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A024A2BECA6DD0022C058 /* TrendingMovieUITests.swift */; };
 		EC7A024D2BECA6DD0022C058 /* TrendingMovieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A024C2BECA6DD0022C058 /* TrendingMovieUITestsLaunchTests.swift */; };
+		EC7A025B2BECA7120022C058 /* TrendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A025A2BECA7120022C058 /* TrendView.swift */; };
+		EC7A02602BECAA2D0022C058 /* ButtonWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A025F2BECAA2D0022C058 /* ButtonWrapper.swift */; };
+		EC7A02662BECBC3E0022C058 /* TrendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02652BECBC3E0022C058 /* TrendHeaderView.swift */; };
+		EC7A02682BECC0950022C058 /* BackDropImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02672BECC0950022C058 /* BackDropImageView.swift */; };
+		EC7A026A2BECC0E20022C058 /* VoteAverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02692BECC0E20022C058 /* VoteAverageView.swift */; };
+		EC7A026C2BECC1FE0022C058 /* TrendFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A026B2BECC1FE0022C058 /* TrendFooterView.swift */; };
+		EC7A026E2BECC2460022C058 /* TrendCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A026D2BECC2460022C058 /* TrendCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +42,6 @@
 /* Begin PBXFileReference section */
 		EC7A022C2BECA6DA0022C058 /* TrendingMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendingMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7A022F2BECA6DA0022C058 /* TrendingMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovieApp.swift; sourceTree = "<group>"; };
-		EC7A02312BECA6DA0022C058 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC7A02332BECA6DD0022C058 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC7A02362BECA6DD0022C058 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC7A023C2BECA6DD0022C058 /* TrendingMovieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingMovieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +49,13 @@
 		EC7A02462BECA6DD0022C058 /* TrendingMovieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingMovieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7A024A2BECA6DD0022C058 /* TrendingMovieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovieUITests.swift; sourceTree = "<group>"; };
 		EC7A024C2BECA6DD0022C058 /* TrendingMovieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovieUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EC7A025A2BECA7120022C058 /* TrendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendView.swift; sourceTree = "<group>"; };
+		EC7A025F2BECAA2D0022C058 /* ButtonWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWrapper.swift; sourceTree = "<group>"; };
+		EC7A02652BECBC3E0022C058 /* TrendHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendHeaderView.swift; sourceTree = "<group>"; };
+		EC7A02672BECC0950022C058 /* BackDropImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackDropImageView.swift; sourceTree = "<group>"; };
+		EC7A02692BECC0E20022C058 /* VoteAverageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteAverageView.swift; sourceTree = "<group>"; };
+		EC7A026B2BECC1FE0022C058 /* TrendFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendFooterView.swift; sourceTree = "<group>"; };
+		EC7A026D2BECC2460022C058 /* TrendCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +106,9 @@
 		EC7A022E2BECA6DA0022C058 /* TrendingMovie */ = {
 			isa = PBXGroup;
 			children = (
+				EC7A025C2BECA96D0022C058 /* Custom */,
+				EC7A02592BECA6FF0022C058 /* Trend */,
 				EC7A022F2BECA6DA0022C058 /* TrendingMovieApp.swift */,
-				EC7A02312BECA6DA0022C058 /* ContentView.swift */,
 				EC7A02332BECA6DD0022C058 /* Assets.xcassets */,
 				EC7A02352BECA6DD0022C058 /* Preview Content */,
 			);
@@ -125,6 +138,35 @@
 				EC7A024C2BECA6DD0022C058 /* TrendingMovieUITestsLaunchTests.swift */,
 			);
 			path = TrendingMovieUITests;
+			sourceTree = "<group>";
+		};
+		EC7A02592BECA6FF0022C058 /* Trend */ = {
+			isa = PBXGroup;
+			children = (
+				EC7A026F2BECC2690022C058 /* SubViews */,
+				EC7A025A2BECA7120022C058 /* TrendView.swift */,
+			);
+			path = Trend;
+			sourceTree = "<group>";
+		};
+		EC7A025C2BECA96D0022C058 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				EC7A025F2BECAA2D0022C058 /* ButtonWrapper.swift */,
+				EC7A02672BECC0950022C058 /* BackDropImageView.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		EC7A026F2BECC2690022C058 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				EC7A02692BECC0E20022C058 /* VoteAverageView.swift */,
+				EC7A026D2BECC2460022C058 /* TrendCellView.swift */,
+				EC7A026B2BECC1FE0022C058 /* TrendFooterView.swift */,
+				EC7A02652BECBC3E0022C058 /* TrendHeaderView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +299,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC7A02322BECA6DA0022C058 /* ContentView.swift in Sources */,
+				EC7A02682BECC0950022C058 /* BackDropImageView.swift in Sources */,
+				EC7A02602BECAA2D0022C058 /* ButtonWrapper.swift in Sources */,
+				EC7A026A2BECC0E20022C058 /* VoteAverageView.swift in Sources */,
+				EC7A02662BECBC3E0022C058 /* TrendHeaderView.swift in Sources */,
+				EC7A025B2BECA7120022C058 /* TrendView.swift in Sources */,
+				EC7A026C2BECC1FE0022C058 /* TrendFooterView.swift in Sources */,
+				EC7A026E2BECC2460022C058 /* TrendCellView.swift in Sources */,
 				EC7A02302BECA6DA0022C058 /* TrendingMovieApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,8 +475,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -436,9 +485,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.olraedev.TrendingMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -455,8 +508,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,9 +518,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.olraedev.TrendingMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
