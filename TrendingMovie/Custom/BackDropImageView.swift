@@ -8,10 +8,26 @@
 import SwiftUI
 
 struct BackDropImageView: View {
+    
+    let imageURL: String
+    
     var body: some View {
-        Image(systemName: "star")
-            .resizable()
-            .frame(width: .infinity, height: 200)
-            .background(.green)
+        AsyncImage(url: URL(string: imageURL)) { data in
+            switch data {
+            case .empty:
+                ProgressView()
+            case .success(let image):
+                image
+                    .resizable()
+            default:
+                Rectangle()
+                    .background(.white)
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: 200)
+    }
+    
+    init(imageURL: String) {
+        self.imageURL = APIKey.imageURL + imageURL
     }
 }

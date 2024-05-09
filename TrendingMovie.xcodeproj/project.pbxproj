@@ -26,6 +26,12 @@
 		EC7A02782BECCAE80022C058 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02772BECCAE80022C058 /* HTTPMethod.swift */; };
 		EC7A027A2BECCB370022C058 /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02792BECCB370022C058 /* HTTPHeader.swift */; };
 		EC7A027D2BECCC7C0022C058 /* TrendRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A027C2BECCC7C0022C058 /* TrendRouter.swift */; };
+		EC7A02812BECCE1B0022C058 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02802BECCE1B0022C058 /* NetworkManager.swift */; };
+		EC7A02832BECCF200022C058 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02822BECCF200022C058 /* APIError.swift */; };
+		EC7A02852BECDA470022C058 /* TimeWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02842BECDA470022C058 /* TimeWindow.swift */; };
+		EC7A02872BECDAC30022C058 /* TrendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02862BECDAC30022C058 /* TrendViewModel.swift */; };
+		EC7A028A2BECDAEE0022C058 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02892BECDAEE0022C058 /* ViewModelType.swift */; };
+		EC7A028D2BECDC430022C058 /* TrendingMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A028C2BECDC430022C058 /* TrendingMovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +74,12 @@
 		EC7A02772BECCAE80022C058 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		EC7A02792BECCB370022C058 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
 		EC7A027C2BECCC7C0022C058 /* TrendRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendRouter.swift; sourceTree = "<group>"; };
+		EC7A02802BECCE1B0022C058 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EC7A02822BECCF200022C058 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		EC7A02842BECDA470022C058 /* TimeWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeWindow.swift; sourceTree = "<group>"; };
+		EC7A02862BECDAC30022C058 /* TrendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewModel.swift; sourceTree = "<group>"; };
+		EC7A02892BECDAEE0022C058 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		EC7A028C2BECDC430022C058 /* TrendingMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +131,7 @@
 		EC7A022E2BECA6DA0022C058 /* TrendingMovie */ = {
 			isa = PBXGroup;
 			children = (
+				EC7A02882BECDAD60022C058 /* Protocols */,
 				EC7A02702BECC5D30022C058 /* Network */,
 				EC7A025C2BECA96D0022C058 /* Custom */,
 				EC7A02592BECA6FF0022C058 /* Trend */,
@@ -159,6 +172,7 @@
 			children = (
 				EC7A026F2BECC2690022C058 /* SubViews */,
 				EC7A025A2BECA7120022C058 /* TrendView.swift */,
+				EC7A02862BECDAC30022C058 /* TrendViewModel.swift */,
 			);
 			path = Trend;
 			sourceTree = "<group>";
@@ -189,7 +203,10 @@
 				EC7A02752BECC75B0022C058 /* APIKey.swift */,
 				EC7A02772BECCAE80022C058 /* HTTPMethod.swift */,
 				EC7A02792BECCB370022C058 /* HTTPHeader.swift */,
+				EC7A02842BECDA470022C058 /* TimeWindow.swift */,
+				EC7A02822BECCF200022C058 /* APIError.swift */,
 				EC7A02712BECC5EE0022C058 /* TargetType.swift */,
+				EC7A02802BECCE1B0022C058 /* NetworkManager.swift */,
 				EC7A027B2BECCC6F0022C058 /* Trend */,
 			);
 			path = Network;
@@ -199,8 +216,25 @@
 			isa = PBXGroup;
 			children = (
 				EC7A027C2BECCC7C0022C058 /* TrendRouter.swift */,
+				EC7A028B2BECDC2D0022C058 /* Model */,
 			);
 			path = Trend;
+			sourceTree = "<group>";
+		};
+		EC7A02882BECDAD60022C058 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EC7A02892BECDAEE0022C058 /* ViewModelType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EC7A028B2BECDC2D0022C058 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC7A028C2BECDC430022C058 /* TrendingMovieModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,15 +370,21 @@
 			files = (
 				EC7A027A2BECCB370022C058 /* HTTPHeader.swift in Sources */,
 				EC7A02682BECC0950022C058 /* BackDropImageView.swift in Sources */,
+				EC7A02852BECDA470022C058 /* TimeWindow.swift in Sources */,
 				EC7A02602BECAA2D0022C058 /* ButtonWrapper.swift in Sources */,
 				EC7A026A2BECC0E20022C058 /* VoteAverageView.swift in Sources */,
 				EC7A027D2BECCC7C0022C058 /* TrendRouter.swift in Sources */,
 				EC7A02782BECCAE80022C058 /* HTTPMethod.swift in Sources */,
 				EC7A02722BECC5EE0022C058 /* TargetType.swift in Sources */,
+				EC7A028A2BECDAEE0022C058 /* ViewModelType.swift in Sources */,
 				EC7A02762BECC75B0022C058 /* APIKey.swift in Sources */,
+				EC7A02832BECCF200022C058 /* APIError.swift in Sources */,
 				EC7A02662BECBC3E0022C058 /* TrendHeaderView.swift in Sources */,
 				EC7A025B2BECA7120022C058 /* TrendView.swift in Sources */,
+				EC7A02812BECCE1B0022C058 /* NetworkManager.swift in Sources */,
+				EC7A02872BECDAC30022C058 /* TrendViewModel.swift in Sources */,
 				EC7A026C2BECC1FE0022C058 /* TrendFooterView.swift in Sources */,
+				EC7A028D2BECDC430022C058 /* TrendingMovieModel.swift in Sources */,
 				EC7A026E2BECC2460022C058 /* TrendCellView.swift in Sources */,
 				EC7A02302BECA6DA0022C058 /* TrendingMovieApp.swift in Sources */,
 			);

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct VoteAverageView: View {
+    
+    let voteAverage: Double
+    
     var body: some View {
         HStack(spacing: 0) {
             Text("평점")
@@ -15,7 +18,7 @@ struct VoteAverageView: View {
                 .padding(.all, 3)
                 .background(.blue)
                 .foregroundStyle(.white)
-            Text("3.3")
+            Text(String(format: "%.1f", voteAverage))
                 .font(.caption)
                 .padding(.all, 3)
                 .background(.white)

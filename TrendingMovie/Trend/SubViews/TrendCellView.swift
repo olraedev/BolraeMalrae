@@ -8,19 +8,22 @@
 import SwiftUI
 
 struct TrendCellView: View {
+    
+    let movie: TrendingMovieResult
+    
     var body: some View {
         LazyVStack(alignment: .leading) {
-            TrendHeaderView(date: "24/05/09", genre: "#Mystery")
-            VStack {
+            TrendHeaderView(date: movie.releaseDate, genre: "\(movie.genres[0])")
+            VStack(spacing: 0) {
                 ZStack(alignment: .bottomLeading) {
-                    BackDropImageView()
-                    VoteAverageView()
+                    BackDropImageView(imageURL: movie.backdrop)
+                    VoteAverageView(voteAverage: movie.voteAverage)
                 }
-                TrendFooterView()
+                TrendFooterView(title: movie.title, overview: movie.overview)
             } // VStack
             .background(.white)
             .clipShape(.rect(cornerRadius: 10))
-            .shadow(radius: 10)
+            .shadow(radius: 5)
         } // LazyVStack
         .padding(.horizontal, 16)
     }
