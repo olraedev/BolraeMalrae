@@ -19,7 +19,8 @@ struct TrendCellView: View {
                     BackDropImageView(imageURL: movie.backdrop)
                     VoteAverageView(voteAverage: movie.voteAverage)
                 }
-                TrendFooterView(title: movie.title, overview: movie.overview)
+                TrendFooterView(title: movie.title, overview: movie.overview, 
+                                info: movie)
             } // VStack
             .background(.white)
             .clipShape(.rect(cornerRadius: 10))

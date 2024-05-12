@@ -16,10 +16,12 @@ final class NetworkManager {
         let (data, response) = try await URLSession.shared.data(for: router.asURLRequest())
         
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            print("invalidResponse")
             throw APIError.invalidResponse
         }
         
         guard let data = try? JSONDecoder().decode(model.self, from: data) else {
+            print("noData")
             throw APIError.noData
         }
         

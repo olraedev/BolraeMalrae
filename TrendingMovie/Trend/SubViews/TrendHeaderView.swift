@@ -18,12 +18,16 @@ struct TrendHeaderView: View {
                 .font(.caption)
                 .foregroundStyle(.gray)
             HStack {
-                ForEach(genre, id: \.self) { genre in
-                    Text("#\(genre)")
-                        .bold()
-                }
+                findGenre()
             }
         }
         .padding(.leading, 8)
+    }
+    
+    private func findGenre() -> some View {
+        ForEach(genre, id: \.self) { genre in
+            Text("#\(GenreManager.shared.genres[genre] ?? "")")
+                .bold()
+        }
     }
 }

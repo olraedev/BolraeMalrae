@@ -7,12 +7,13 @@
 
 import Foundation
 
-enum TrendRouter {
+enum Router {
     case trendingMovie(timeWindow: TimeWindow)
     case genre
+    case credit(movieID: Int)
 }
 
-extension TrendRouter: TargetType {
+extension Router: TargetType {
     var baseURL: String {
         return APIKey.baseURL
     }
@@ -25,6 +26,7 @@ extension TrendRouter: TargetType {
         switch self {
         case .trendingMovie(let timeWindow): "/trending/movie/\(timeWindow.rawValue)"
         case .genre: "/genre/movie/list"
+        case .credit(let movieID): "/movie/\(movieID)/credits"
         }
     }
     

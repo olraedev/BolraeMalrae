@@ -30,6 +30,7 @@ extension TargetType {
         urlRequest.httpMethod = method.rawValue
         urlRequest.allHTTPHeaderFields = header
         
+        print(urlRequest)
         return urlRequest
     }
 }
