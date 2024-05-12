@@ -14,10 +14,18 @@ struct MainTabView: View {
                 .tabItem {
                     Label(
                         title: { Text("Trending") },
-                        icon: { Image(systemName: "home") }
+                        icon: { Image(systemName: "house") }
                     )
                 }
+            
+            FavoriteView()
+                .tabItem { Label(
+                    title: { Text("Favorite") },
+                    icon: { Image(systemName: "heart") }
+                ) }
         }
+        .toolbarBackground(.white, for: .tabBar)
+        .tint(.customPrimary)
     }
 }
 
