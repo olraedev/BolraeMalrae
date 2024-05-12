@@ -23,10 +23,12 @@ final class TrendViewModel: ViewModelType {
 extension TrendViewModel {
     struct Input {
         let viewOnAppear = PassthroughSubject<Void, Never>()
+        var selected = CurrentValueSubject<TimeWindow, Never>(TimeWindow.day)
     }
     
     struct Output {
         var trendingMovieList: [TrendingMovieResult] = []
+        var menus = TimeWindow.allCases
     }
 }
 
@@ -36,16 +38,25 @@ extension TrendViewModel {
             .sink { [weak self] _ in
                 guard let self = self else { return }
                 Task {
-                    try? await self.fetchMoviesGenre()
-                    try? await self.fetchTrendingMovie()
+                    await self.fetchMoviesGenre()
+                    await self.fetchTrendingMovie(timeWindow: .day)
+                }
+            }
+            .store(in: &cancellable)
+        
+        input.selected
+            .sink { [weak self] timeWindow in
+                guard let self else { return }
+                Task {
+                    await self.fetchTrendingMovie(timeWindow: timeWindow)
                 }
             }
             .store(in: &cancellable)
     }
     
-    private func fetchTrendingMovie() async throws {
+    private func fetchTrendingMovie(timeWindow: TimeWindow) async {
         do {
-            let data = try await NetworkManager.shared.requestToTmdbAPI(model: TrendingMovieModel.self, router: Router.trendingMovie(timeWindow: .day)).results
+            let data = try await NetworkManager.shared.requestToTmdbAPI(model: TrendingMovieModel.self, router: Router.trendingMovie(timeWindow: timeWindow)).results
             await MainActor.run {
                 output.trendingMovieList = data
             }
@@ -54,7 +65,7 @@ extension TrendViewModel {
         }
     }
     
-    private func fetchMoviesGenre() async throws {
+    private func fetchMoviesGenre() async {
         do {
             let result = try await NetworkManager.shared.requestToTmdbAPI(model: GenreModel.self, router: Router.genre).genres
             await MainActor.run {

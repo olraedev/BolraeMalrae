@@ -17,6 +17,7 @@ struct TrendCellView: View {
             LazyVStack(spacing: 0) {
                 ZStack(alignment: .bottomLeading) {
                     BackDropImageView(imageURL: movie.backdrop)
+                        .frame(height: 200)
                     VoteAverageView(voteAverage: movie.voteAverage)
                 }
                 TrendFooterView(title: movie.title, overview: movie.overview, 

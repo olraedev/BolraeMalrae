@@ -10,37 +10,36 @@ import SwiftUI
 struct TrendView: View {
     
     @StateObject var viewModel = TrendViewModel()
-    private let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
         NavigationStack {
             ScrollView {
-                LazyVGrid(columns: columns, spacing: 40) {
+                Picker("", selection: $viewModel.input.selected.value) {
+                    ForEach(viewModel.output.menus, id:\.self) { menu in
+                        Text(menu.title)
+                    }
+                }
+                .pickerStyle(.segmented)
+                .padding(.horizontal, 16)
+                .padding(.vertical, 8)
+                
+                LazyVGrid(columns: [GridItem(.flexible())], spacing: 40) {
                     ForEach(viewModel.output.trendingMovieList, id: \.id) { item in
                         TrendCellView(movie: item)
                     }
                 } // LazyVGrid
             } // ScrollView
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Image(systemName: "line.3.horizontal")
-                        .foregroundStyle(.black)
-                        .wrapToButton {
-                            
-                        }
-                }
-                ToolbarItem(placement: .topBarTrailing) {
-                    Image(systemName: "magnifyingglass")
-                        .foregroundStyle(.black)
-                        .wrapToButton {
-                            
-                        }
-                }
-            } // .toolbar
+            .navigationTitle("Trending")
         } // NavigationStack
         .task {
             viewModel.input.viewOnAppear.send(())
         }
+    }
+    
+    init() {
+        UISegmentedControl.appearance().selectedSegmentTintColor = .customPrimary
+        UISegmentedControl.appearance().backgroundColor = .customPrimary.withAlphaComponent(0.2)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
     }
 }
 

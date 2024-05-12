@@ -15,7 +15,7 @@ struct DetailView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                DetailHeaderView(backdrop: movie.backdrop, movieTitle: movie.title, poster: movie.poster)
+                DetailHeaderView(backdrop: movie.backdrop, poster: movie.poster)
                 
                 Section {
                     OverviewView(overView: movie.overview)
@@ -37,7 +37,7 @@ struct DetailView: View {
                 .padding(.horizontal, 16)
 
             } // ScrollView
-            .navigationTitle("출연/제작")
+            .navigationTitle(movie.title)
             .navigationBarTitleDisplayMode(.inline)
         } // NavigationStack
         .task {

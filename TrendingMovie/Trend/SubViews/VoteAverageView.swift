@@ -16,7 +16,7 @@ struct VoteAverageView: View {
             Text("평점")
                 .font(.caption)
                 .padding(.all, 3)
-                .background(.blue)
+                .background(.customPrimary)
                 .foregroundStyle(.white)
             Text(String(format: "%.1f", voteAverage))
                 .font(.caption)
