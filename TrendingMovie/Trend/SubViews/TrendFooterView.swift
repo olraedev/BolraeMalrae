@@ -11,7 +11,7 @@ struct TrendFooterView: View {
     
     let title: String
     let overview: String
-    let info: TrendingMovieResult
+    let info: CommonMovieList
     
     var body: some View {
         VStack(alignment: .leading) {

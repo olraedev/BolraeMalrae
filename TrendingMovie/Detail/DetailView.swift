@@ -10,7 +10,7 @@ import SwiftUI
 struct DetailView: View {
     
     @StateObject private var viewModel = DetailViewModel()
-    let movie: TrendingMovieResult
+    let movie: CommonMovieList
     
     var body: some View {
         NavigationStack {

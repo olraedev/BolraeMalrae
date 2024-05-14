@@ -23,6 +23,7 @@ struct VoteAverageView: View {
                 .padding(.all, 3)
                 .background(.white)
         }
-        .offset(x: 16, y: -16)
+        .padding(.bottom, 16)
+        .padding(.leading, 16)
     }
 }

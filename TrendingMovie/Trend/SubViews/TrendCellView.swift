@@ -9,7 +9,8 @@ import SwiftUI
 
 struct TrendCellView: View {
     
-    let movie: TrendingMovieResult
+    @StateObject private var viewModel = TrendCellViewModel()
+    let movie: CommonMovieList
     
     var body: some View {
         LazyVStack(alignment: .leading) {
@@ -18,7 +19,30 @@ struct TrendCellView: View {
                 ZStack(alignment: .bottomLeading) {
                     BackDropImageView(imageURL: movie.backdrop)
                         .frame(height: 200)
-                    VoteAverageView(voteAverage: movie.voteAverage)
+                    
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Image(systemName: viewModel.output.isFavorite ? "heart.fill" : "heart")
+                                .frame(width: 30, height: 30)
+                                .background(.white)
+                                .foregroundStyle(.customPrimary)
+                                .clipShape(Circle())
+                                .padding(.top, 16)
+                                .padding(.trailing, 16)
+                                .wrapToButton {
+                                    viewModel.input.favoriteButtonClicked.send(movie)
+                                }
+                        }
+                        Spacer()
+                        HStack {
+                            VoteAverageView(voteAverage: movie.voteAverage)
+                            Spacer()
+                        }
+                    }
+                    .frame(height: 200)
+                    .frame(maxWidth: .infinity)
+                    
                 }
                 TrendFooterView(title: movie.title, overview: movie.overview, 
                                 info: movie)
@@ -28,5 +52,8 @@ struct TrendCellView: View {
             .shadow(radius: 5)
         } // LazyVStack
         .padding(.horizontal, 16)
+        .onAppear {
+            viewModel.input.onAppearTrigger.send(movie.id)
+        }
     }
 }

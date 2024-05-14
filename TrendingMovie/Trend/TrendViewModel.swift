@@ -27,7 +27,7 @@ extension TrendViewModel {
     }
     
     struct Output {
-        var trendingMovieList: [TrendingMovieResult] = []
+        var trendingMovieList: [CommonMovieList] = []
         var menus = TimeWindow.allCases
     }
 }
@@ -58,7 +58,7 @@ extension TrendViewModel {
         do {
             let data = try await NetworkManager.shared.requestToTmdbAPI(model: TrendingMovieModel.self, router: Router.trendingMovie(timeWindow: timeWindow)).results
             await MainActor.run {
-                output.trendingMovieList = data
+                output.trendingMovieList = CommonMovieListManager.shared.tmdbModelToCommonList(data)
             }
         } catch {
             output.trendingMovieList = []

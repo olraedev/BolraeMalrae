@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		EC78998C2BF340C6003C421E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EC78998B2BF340C6003C421E /* RealmSwift */; };
 		EC7899902BF34956003C421E /* FavoriteInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78998F2BF34956003C421E /* FavoriteInfoView.swift */; };
+		EC7899922BF34FAE003C421E /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7899912BF34FAE003C421E /* FavoriteViewModel.swift */; };
+		EC7899942BF350C7003C421E /* FavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7899932BF350C7003C421E /* FavoriteModel.swift */; };
+		EC7899962BF3530B003C421E /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7899952BF3530B003C421E /* RealmRepository.swift */; };
+		EC7899982BF35A45003C421E /* CommonMovieListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7899972BF35A45003C421E /* CommonMovieListManager.swift */; };
+		EC78999C2BF38691003C421E /* TrendCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78999B2BF38691003C421E /* TrendCellViewModel.swift */; };
 		EC7A02302BECA6DA0022C058 /* TrendingMovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A022F2BECA6DA0022C058 /* TrendingMovieApp.swift */; };
 		EC7A02342BECA6DD0022C058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7A02332BECA6DD0022C058 /* Assets.xcassets */; };
 		EC7A02372BECA6DD0022C058 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7A02362BECA6DD0022C058 /* Preview Assets.xcassets */; };
@@ -68,6 +73,11 @@
 
 /* Begin PBXFileReference section */
 		EC78998F2BF34956003C421E /* FavoriteInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInfoView.swift; sourceTree = "<group>"; };
+		EC7899912BF34FAE003C421E /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		EC7899932BF350C7003C421E /* FavoriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModel.swift; sourceTree = "<group>"; };
+		EC7899952BF3530B003C421E /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
+		EC7899972BF35A45003C421E /* CommonMovieListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMovieListManager.swift; sourceTree = "<group>"; };
+		EC78999B2BF38691003C421E /* TrendCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendCellViewModel.swift; sourceTree = "<group>"; };
 		EC7A022C2BECA6DA0022C058 /* TrendingMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendingMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7A022F2BECA6DA0022C058 /* TrendingMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovieApp.swift; sourceTree = "<group>"; };
 		EC7A02332BECA6DD0022C058 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +150,8 @@
 		EC78998D2BF340F7003C421E /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				EC7899932BF350C7003C421E /* FavoriteModel.swift */,
+				EC7899952BF3530B003C421E /* RealmRepository.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -223,6 +235,7 @@
 				EC7A026F2BECC2690022C058 /* SubViews */,
 				EC7A025A2BECA7120022C058 /* TrendView.swift */,
 				EC7A02862BECDAC30022C058 /* TrendViewModel.swift */,
+				EC78999B2BF38691003C421E /* TrendCellViewModel.swift */,
 			);
 			path = Trend;
 			sourceTree = "<group>";
@@ -296,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				ECFAC2772BF0A65C00C1DC60 /* GenreManager.swift */,
+				EC7899972BF35A45003C421E /* CommonMovieListManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -325,6 +339,7 @@
 			children = (
 				EC78998E2BF34942003C421E /* SubViews */,
 				ECFAC2932BF10CA400C1DC60 /* FavoriteView.swift */,
+				EC7899912BF34FAE003C421E /* FavoriteViewModel.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -478,16 +493,19 @@
 				EC7A026A2BECC0E20022C058 /* VoteAverageView.swift in Sources */,
 				EC7A027D2BECCC7C0022C058 /* Router.swift in Sources */,
 				ECFAC27F2BF0BDED00C1DC60 /* DetailHeaderView.swift in Sources */,
+				EC7899982BF35A45003C421E /* CommonMovieListManager.swift in Sources */,
 				EC7A02782BECCAE80022C058 /* HTTPMethod.swift in Sources */,
 				EC7A02722BECC5EE0022C058 /* TargetType.swift in Sources */,
 				EC7A028A2BECDAEE0022C058 /* ViewModelType.swift in Sources */,
 				ECFAC28F2BF0C27D00C1DC60 /* CreditModel.swift in Sources */,
 				ECFAC2752BF0A28700C1DC60 /* DetailView.swift in Sources */,
+				EC7899962BF3530B003C421E /* RealmRepository.swift in Sources */,
 				ECFAC2912BF1080800C1DC60 /* MainTabView.swift in Sources */,
 				ECFAC27C2BF0B6E400C1DC60 /* VerticalLine.swift in Sources */,
 				EC7A02762BECC75B0022C058 /* APIKey.swift in Sources */,
 				ECFAC2812BF0BE4000C1DC60 /* PosterView.swift in Sources */,
 				EC7A02832BECCF200022C058 /* APIError.swift in Sources */,
+				EC78999C2BF38691003C421E /* TrendCellViewModel.swift in Sources */,
 				EC7A02662BECBC3E0022C058 /* TrendHeaderView.swift in Sources */,
 				EC7A025B2BECA7120022C058 /* TrendView.swift in Sources */,
 				EC7A02812BECCE1B0022C058 /* NetworkManager.swift in Sources */,
@@ -496,6 +514,8 @@
 				EC7A028D2BECDC430022C058 /* TrendingMovieModel.swift in Sources */,
 				EC7A026E2BECC2460022C058 /* TrendCellView.swift in Sources */,
 				EC7899902BF34956003C421E /* FavoriteInfoView.swift in Sources */,
+				EC7899922BF34FAE003C421E /* FavoriteViewModel.swift in Sources */,
+				EC7899942BF350C7003C421E /* FavoriteModel.swift in Sources */,
 				EC7A02302BECA6DA0022C058 /* TrendingMovieApp.swift in Sources */,
 				ECFAC2832BF0BEFE00C1DC60 /* OverviewView.swift in Sources */,
 				ECFAC2872BF0BF9E00C1DC60 /* CastView.swift in Sources */,
