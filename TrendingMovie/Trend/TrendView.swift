@@ -30,6 +30,7 @@ struct TrendView: View {
                 } // LazyVGrid
             } // ScrollView
             .navigationTitle("Trending")
+            .scrollIndicators(.never)
         } // NavigationStack
         .task {
             viewModel.input.viewOnAppear.send(())
