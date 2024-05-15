@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TrendCellView: View {
     
-    @StateObject private var viewModel = TrendCellViewModel()
+    @StateObject private var viewModel = ConfigureFavoriteViewModel()
     let movie: CommonMovieList
     
     var body: some View {

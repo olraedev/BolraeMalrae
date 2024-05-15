@@ -22,10 +22,10 @@ struct FavoriteView: View {
                         } label: {
                             VStack {
                                 PosterView(imageURL: movie.poster)
-                                    .aspectRatio(0.8, contentMode: .fill)
+                                    .aspectRatio(0.8, contentMode: .fit)
                                     .clipShape(.rect(cornerRadius: 8))
                                     .padding(.bottom, 3)
-                                FavoriteInfoView(date: movie.releaseDate, title: movie.title)
+                                FavoriteInfoView(movie: movie)
                             }
                         }
                     }

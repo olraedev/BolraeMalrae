@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class TrendCellViewModel: ViewModelType {
+final class ConfigureFavoriteViewModel: ViewModelType {
     
     var cancellable = Set<AnyCancellable>()
     
@@ -20,7 +20,7 @@ final class TrendCellViewModel: ViewModelType {
     }
 }
 
-extension TrendCellViewModel {
+extension ConfigureFavoriteViewModel {
     struct Input {
         let onAppearTrigger = PassthroughSubject<Int, Never>()
         let favoriteButtonClicked = PassthroughSubject<CommonMovieList, Never>()
@@ -31,7 +31,7 @@ extension TrendCellViewModel {
     }
 }
 
-extension TrendCellViewModel {
+extension ConfigureFavoriteViewModel {
     func transform() {
         input.onAppearTrigger
             .sink { [weak self] primaryKey in
