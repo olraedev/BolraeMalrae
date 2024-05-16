@@ -56,7 +56,7 @@ extension TrendViewModel {
     
     private func fetchTrendingMovie(timeWindow: TimeWindow) async {
         do {
-            let data = try await NetworkManager.shared.requestToTmdbAPI(model: TrendingMovieModel.self, router: Router.trendingMovie(timeWindow: timeWindow)).results
+            let data = try await NetworkManager.shared.requestToTmdbAPI(model: TrendingMovieModel.self, router: TMDBRouter.trendingMovie(timeWindow: timeWindow)).results
             await MainActor.run {
                 output.trendingMovieList = CommonMovieListManager.shared.tmdbModelToCommonList(data)
             }
@@ -67,7 +67,7 @@ extension TrendViewModel {
     
     private func fetchMoviesGenre() async {
         do {
-            let result = try await NetworkManager.shared.requestToTmdbAPI(model: GenreModel.self, router: Router.genre).genres
+            let result = try await NetworkManager.shared.requestToTmdbAPI(model: GenreModel.self, router: TMDBRouter.genre).genres
             await MainActor.run {
                 GenreManager.shared.configureGenres(result)
             }

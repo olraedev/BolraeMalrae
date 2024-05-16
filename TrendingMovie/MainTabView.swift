@@ -11,18 +11,22 @@ struct MainTabView: View {
     var body: some View {
         TabView {
             TrendView()
-                .tabItem {
-                    Label(
-                        title: { Text("Trending") },
-                        icon: { Image(systemName: "house") }
-                    )
-                }
+                .tabItem { Label(
+                    title: { Text("홈") },
+                    icon: { Image(systemName: "house") }
+                )}
+            
+            CommunityView()
+                .tabItem { Label(
+                    title: { Text("커뮤니티") },
+                    icon: { Image(systemName: "ellipsis.message") }
+                )}
             
             FavoriteView()
                 .tabItem { Label(
-                    title: { Text("Favorite") },
-                    icon: { Image(systemName: "heart") }
-                ) }
+                    title: { Text("즐겨찾기") },
+                    icon: { Image(systemName: "heart.fill") }
+                )}
         }
         .toolbarBackground(.white, for: .tabBar)
         .tint(.customPrimary)

@@ -32,7 +32,7 @@
 		EC7A02762BECC75B0022C058 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02752BECC75B0022C058 /* APIKey.swift */; };
 		EC7A02782BECCAE80022C058 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02772BECCAE80022C058 /* HTTPMethod.swift */; };
 		EC7A027A2BECCB370022C058 /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02792BECCB370022C058 /* HTTPHeader.swift */; };
-		EC7A027D2BECCC7C0022C058 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A027C2BECCC7C0022C058 /* Router.swift */; };
+		EC7A027D2BECCC7C0022C058 /* TMDBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A027C2BECCC7C0022C058 /* TMDBRouter.swift */; };
 		EC7A02812BECCE1B0022C058 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02802BECCE1B0022C058 /* NetworkManager.swift */; };
 		EC7A02832BECCF200022C058 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02822BECCF200022C058 /* APIError.swift */; };
 		EC7A02852BECDA470022C058 /* TimeWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02842BECDA470022C058 /* TimeWindow.swift */; };
@@ -40,6 +40,10 @@
 		EC7A028A2BECDAEE0022C058 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02892BECDAEE0022C058 /* ViewModelType.swift */; };
 		EC7A028D2BECDC430022C058 /* TrendingMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A028C2BECDC430022C058 /* TrendingMovieModel.swift */; };
 		EC7A028F2BECEDA60022C058 /* GenreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A028E2BECEDA60022C058 /* GenreModel.swift */; };
+		EC93D2FC2BF5F6A900CDB1D5 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93D2FB2BF5F6A900CDB1D5 /* CommunityView.swift */; };
+		EC93D2FF2BF5F96A00CDB1D5 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93D2FE2BF5F96A00CDB1D5 /* UserRouter.swift */; };
+		EC93D3032BF5F9B200CDB1D5 /* JoinQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93D3022BF5F9B200CDB1D5 /* JoinQuery.swift */; };
+		EC93D3052BF5F9D400CDB1D5 /* LoginQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93D3042BF5F9D400CDB1D5 /* LoginQuery.swift */; };
 		ECFAC2752BF0A28700C1DC60 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC2742BF0A28700C1DC60 /* DetailView.swift */; };
 		ECFAC2782BF0A65C00C1DC60 /* GenreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC2772BF0A65C00C1DC60 /* GenreManager.swift */; };
 		ECFAC27C2BF0B6E400C1DC60 /* VerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC27B2BF0B6E400C1DC60 /* VerticalLine.swift */; };
@@ -99,7 +103,7 @@
 		EC7A02752BECC75B0022C058 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		EC7A02772BECCAE80022C058 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		EC7A02792BECCB370022C058 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
-		EC7A027C2BECCC7C0022C058 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EC7A027C2BECCC7C0022C058 /* TMDBRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBRouter.swift; sourceTree = "<group>"; };
 		EC7A02802BECCE1B0022C058 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EC7A02822BECCF200022C058 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		EC7A02842BECDA470022C058 /* TimeWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeWindow.swift; sourceTree = "<group>"; };
@@ -107,6 +111,10 @@
 		EC7A02892BECDAEE0022C058 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		EC7A028C2BECDC430022C058 /* TrendingMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovieModel.swift; sourceTree = "<group>"; };
 		EC7A028E2BECEDA60022C058 /* GenreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreModel.swift; sourceTree = "<group>"; };
+		EC93D2FB2BF5F6A900CDB1D5 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
+		EC93D2FE2BF5F96A00CDB1D5 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		EC93D3022BF5F9B200CDB1D5 /* JoinQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinQuery.swift; sourceTree = "<group>"; };
+		EC93D3042BF5F9D400CDB1D5 /* LoginQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginQuery.swift; sourceTree = "<group>"; };
 		ECFAC2742BF0A28700C1DC60 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		ECFAC2772BF0A65C00C1DC60 /* GenreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreManager.swift; sourceTree = "<group>"; };
 		ECFAC27B2BF0B6E400C1DC60 /* VerticalLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLine.swift; sourceTree = "<group>"; };
@@ -195,6 +203,7 @@
 				EC7A025C2BECA96D0022C058 /* Custom */,
 				EC7A02592BECA6FF0022C058 /* Trend */,
 				ECFAC2732BF0A26F00C1DC60 /* Detail */,
+				EC93D2FA2BF5F66E00CDB1D5 /* Community */,
 				ECFAC2922BF10C9100C1DC60 /* Favorite */,
 				EC7A022F2BECA6DA0022C058 /* TrendingMovieApp.swift */,
 				ECFAC2902BF1080800C1DC60 /* MainTabView.swift */,
@@ -272,7 +281,8 @@
 				EC7A02822BECCF200022C058 /* APIError.swift */,
 				EC7A02712BECC5EE0022C058 /* TargetType.swift */,
 				EC7A02802BECCE1B0022C058 /* NetworkManager.swift */,
-				ECFAC28D2BF0C1EA00C1DC60 /* Router */,
+				ECFAC28D2BF0C1EA00C1DC60 /* TMDBRouter */,
+				EC93D2FD2BF5F94D00CDB1D5 /* UserRouter */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -291,6 +301,40 @@
 				EC7A028C2BECDC430022C058 /* TrendingMovieModel.swift */,
 				EC7A028E2BECEDA60022C058 /* GenreModel.swift */,
 				ECFAC28E2BF0C27D00C1DC60 /* CreditModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC93D2FA2BF5F66E00CDB1D5 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				EC93D2FB2BF5F6A900CDB1D5 /* CommunityView.swift */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		EC93D2FD2BF5F94D00CDB1D5 /* UserRouter */ = {
+			isa = PBXGroup;
+			children = (
+				EC93D2FE2BF5F96A00CDB1D5 /* UserRouter.swift */,
+				EC93D3002BF5F98900CDB1D5 /* Query */,
+				EC93D3012BF5F99500CDB1D5 /* Model */,
+			);
+			path = UserRouter;
+			sourceTree = "<group>";
+		};
+		EC93D3002BF5F98900CDB1D5 /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				EC93D3022BF5F9B200CDB1D5 /* JoinQuery.swift */,
+				EC93D3042BF5F9D400CDB1D5 /* LoginQuery.swift */,
+			);
+			path = Query;
+			sourceTree = "<group>";
+		};
+		EC93D3012BF5F99500CDB1D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -325,13 +369,13 @@
 			path = SubViews;
 			sourceTree = "<group>";
 		};
-		ECFAC28D2BF0C1EA00C1DC60 /* Router */ = {
+		ECFAC28D2BF0C1EA00C1DC60 /* TMDBRouter */ = {
 			isa = PBXGroup;
 			children = (
-				EC7A027C2BECCC7C0022C058 /* Router.swift */,
+				EC7A027C2BECCC7C0022C058 /* TMDBRouter.swift */,
 				EC7A028B2BECDC2D0022C058 /* Model */,
 			);
-			path = Router;
+			path = TMDBRouter;
 			sourceTree = "<group>";
 		};
 		ECFAC2922BF10C9100C1DC60 /* Favorite */ = {
@@ -485,13 +529,15 @@
 				EC7A028F2BECEDA60022C058 /* GenreModel.swift in Sources */,
 				ECFAC2892BF0C07900C1DC60 /* DetailViewModel.swift in Sources */,
 				EC7A02682BECC0950022C058 /* BackDropImageView.swift in Sources */,
+				EC93D3052BF5F9D400CDB1D5 /* LoginQuery.swift in Sources */,
+				EC93D3032BF5F9B200CDB1D5 /* JoinQuery.swift in Sources */,
 				ECFAC2782BF0A65C00C1DC60 /* GenreManager.swift in Sources */,
 				ECFAC2852BF0BF5800C1DC60 /* SectionHeaderView.swift in Sources */,
 				EC7A02852BECDA470022C058 /* TimeWindow.swift in Sources */,
 				EC7A02602BECAA2D0022C058 /* ButtonWrapper.swift in Sources */,
 				ECFAC2942BF10CA400C1DC60 /* FavoriteView.swift in Sources */,
 				EC7A026A2BECC0E20022C058 /* VoteAverageView.swift in Sources */,
-				EC7A027D2BECCC7C0022C058 /* Router.swift in Sources */,
+				EC7A027D2BECCC7C0022C058 /* TMDBRouter.swift in Sources */,
 				ECFAC27F2BF0BDED00C1DC60 /* DetailHeaderView.swift in Sources */,
 				EC7899982BF35A45003C421E /* CommonMovieListManager.swift in Sources */,
 				EC7A02782BECCAE80022C058 /* HTTPMethod.swift in Sources */,
@@ -500,6 +546,7 @@
 				ECFAC28F2BF0C27D00C1DC60 /* CreditModel.swift in Sources */,
 				ECFAC2752BF0A28700C1DC60 /* DetailView.swift in Sources */,
 				EC7899962BF3530B003C421E /* RealmRepository.swift in Sources */,
+				EC93D2FF2BF5F96A00CDB1D5 /* UserRouter.swift in Sources */,
 				ECFAC2912BF1080800C1DC60 /* MainTabView.swift in Sources */,
 				ECFAC27C2BF0B6E400C1DC60 /* VerticalLine.swift in Sources */,
 				EC7A02762BECC75B0022C058 /* APIKey.swift in Sources */,
@@ -513,6 +560,7 @@
 				EC7A026C2BECC1FE0022C058 /* TrendFooterView.swift in Sources */,
 				EC7A028D2BECDC430022C058 /* TrendingMovieModel.swift in Sources */,
 				EC7A026E2BECC2460022C058 /* TrendCellView.swift in Sources */,
+				EC93D2FC2BF5F6A900CDB1D5 /* CommunityView.swift in Sources */,
 				EC7899902BF34956003C421E /* FavoriteInfoView.swift in Sources */,
 				EC7899922BF34FAE003C421E /* FavoriteViewModel.swift in Sources */,
 				EC7899942BF350C7003C421E /* FavoriteModel.swift in Sources */,

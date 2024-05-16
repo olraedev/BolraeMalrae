@@ -27,6 +27,6 @@ struct PosterView: View {
     }
     
     init(imageURL: String) {
-        self.imageURL = APIKey.imageURL + imageURL
+        self.imageURL = APIKey.movieImageURL + imageURL
     }
 }
