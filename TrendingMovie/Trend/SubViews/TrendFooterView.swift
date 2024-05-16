@@ -26,7 +26,7 @@ struct TrendFooterView: View {
             Rectangle()
                 .frame(height: 1)
             NavigationLink {
-                DetailView(movie: info)
+                DetailView(viewModel: DetailViewModel(movie: info))
             } label: {
                 HStack {
                     Text("자세히 보기")

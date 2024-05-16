@@ -12,10 +12,11 @@ final class DetailViewModel: ViewModelType {
     
     var cancellable = Set<AnyCancellable>()
     
-    var input = Input()
-    @Published var output = Output()
+    var input: Input = Input()
+    @Published var output: Output
     
-    init() {
+    init(movie: CommonMovieList) {
+        output = Output(movie: movie)
         transform()
     }
 }
@@ -26,6 +27,7 @@ extension DetailViewModel {
     }
     
     struct Output {
+        let movie: CommonMovieList
         var castList: [Cast] = []
     }
 }

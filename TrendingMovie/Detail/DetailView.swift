@@ -9,16 +9,19 @@ import SwiftUI
 
 struct DetailView: View {
     
-    @StateObject private var viewModel = DetailViewModel()
-    let movie: CommonMovieList
+    @ObservedObject private var viewModel: DetailViewModel
+    
+    init(viewModel: DetailViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         NavigationStack {
             ScrollView {
-                DetailHeaderView(backdrop: movie.backdrop, poster: movie.poster)
+                DetailHeaderView(backdrop: viewModel.output.movie.backdrop, poster: viewModel.output.movie.poster)
                 
                 Section {
-                    OverviewView(overView: movie.overview)
+                    OverviewView(overView: viewModel.output.movie.overview)
                 } header: {
                     SectionHeaderView(title: "Overview")
                 }
@@ -37,11 +40,11 @@ struct DetailView: View {
                 .padding(.horizontal, 16)
 
             } // ScrollView
-            .navigationTitle(movie.title)
+            .navigationTitle(viewModel.output.movie.title)
             .navigationBarTitleDisplayMode(.inline)
         } // NavigationStack
         .task {
-            viewModel.input.viewOnAppear.send(movie.id)
+            viewModel.input.viewOnAppear.send(viewModel.output.movie.id)
         }
     }
 }

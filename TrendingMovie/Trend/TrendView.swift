@@ -25,7 +25,7 @@ struct TrendView: View {
                 
                 LazyVGrid(columns: [GridItem(.flexible())], spacing: 40) {
                     ForEach(viewModel.output.trendingMovieList, id: \.id) { item in
-                        TrendCellView(movie: item)
+                        TrendCellView(viewModel: ConfigureFavoriteViewModel(movie: item))
                     }
                 } // LazyVGrid
             } // ScrollView

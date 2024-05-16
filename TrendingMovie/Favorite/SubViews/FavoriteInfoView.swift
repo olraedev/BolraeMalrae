@@ -9,31 +9,34 @@ import SwiftUI
 
 struct FavoriteInfoView: View {
     
-    @StateObject private var viewModel = ConfigureFavoriteViewModel()
-    let movie: CommonMovieList
+    @ObservedObject private var viewModel: ConfigureFavoriteViewModel
+    
+    init(viewModel: ConfigureFavoriteViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         VStack {
             HStack(alignment: .center) {
-                Text(movie.releaseDate)
+                Text(viewModel.output.movie.releaseDate)
                     .font(.caption)
                     .foregroundStyle(.gray)
                 Spacer()
                 Image(systemName: viewModel.output.isFavorite ? "heart.fill" : "heart")
                     .foregroundStyle(.customPrimary)
                     .wrapToButton {
-                        viewModel.input.favoriteButtonClicked.send(movie)
+                        viewModel.input.favoriteButtonClicked.send(())
                     }
             }
             .padding(.bottom, 3)
-            Text(movie.title)
+            Text(viewModel.output.movie.title)
                 .lineLimit(1)
                 .foregroundStyle(.black)
                 .bold()
         }
         .padding(.horizontal, 8)
         .onAppear {
-            viewModel.input.onAppearTrigger.send(movie.id)
+            viewModel.input.onAppearTrigger.send(())
         }
     }
 }

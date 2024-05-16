@@ -9,15 +9,18 @@ import SwiftUI
 
 struct TrendCellView: View {
     
-    @StateObject private var viewModel = ConfigureFavoriteViewModel()
-    let movie: CommonMovieList
+    @ObservedObject private var viewModel: ConfigureFavoriteViewModel
+    
+    init(viewModel: ConfigureFavoriteViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         LazyVStack(alignment: .leading) {
-            TrendHeaderView(date: movie.releaseDate, genre: movie.genres)
+            TrendHeaderView(date: viewModel.output.movie.releaseDate, genre: viewModel.output.movie.genres)
             LazyVStack(spacing: 0) {
                 ZStack(alignment: .bottomLeading) {
-                    BackDropImageView(imageURL: movie.backdrop)
+                    BackDropImageView(imageURL: viewModel.output.movie.backdrop)
                         .frame(height: 200)
                     
                     VStack {
@@ -31,12 +34,12 @@ struct TrendCellView: View {
                                 .padding(.top, 16)
                                 .padding(.trailing, 16)
                                 .wrapToButton {
-                                    viewModel.input.favoriteButtonClicked.send(movie)
+                                    viewModel.input.favoriteButtonClicked.send(())
                                 }
                         }
                         Spacer()
                         HStack {
-                            VoteAverageView(voteAverage: movie.voteAverage)
+                            VoteAverageView(voteAverage: viewModel.output.movie.voteAverage)
                             Spacer()
                         }
                     }
@@ -44,8 +47,9 @@ struct TrendCellView: View {
                     .frame(maxWidth: .infinity)
                     
                 }
-                TrendFooterView(title: movie.title, overview: movie.overview, 
-                                info: movie)
+                TrendFooterView(title: viewModel.output.movie.title,
+                                overview: viewModel.output.movie.overview, 
+                                info: viewModel.output.movie)
             } // VStack
             .background(.white)
             .clipShape(.rect(cornerRadius: 10))
@@ -53,7 +57,7 @@ struct TrendCellView: View {
         } // LazyVStack
         .padding(.horizontal, 16)
         .onAppear {
-            viewModel.input.onAppearTrigger.send(movie.id)
+            viewModel.input.onAppearTrigger.send(())
         }
     }
 }

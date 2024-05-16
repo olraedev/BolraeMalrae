@@ -12,21 +12,24 @@ final class ConfigureFavoriteViewModel: ViewModelType {
     
     var cancellable = Set<AnyCancellable>()
     
-    var input = Input()
-    @Published var output = Output()
+    var input: Input
+    @Published var output: Output
     
-    init() {
+    init(movie: CommonMovieList) {
+        input = Input()
+        output = Output(movie: movie)
         transform()
     }
 }
 
 extension ConfigureFavoriteViewModel {
     struct Input {
-        let onAppearTrigger = PassthroughSubject<Int, Never>()
-        let favoriteButtonClicked = PassthroughSubject<CommonMovieList, Never>()
+        let onAppearTrigger = PassthroughSubject<Void, Never>()
+        let favoriteButtonClicked = PassthroughSubject<Void, Never>()
     }
     
     struct Output {
+        var movie: CommonMovieList
         var isFavorite = false
     }
 }
@@ -34,21 +37,21 @@ extension ConfigureFavoriteViewModel {
 extension ConfigureFavoriteViewModel {
     func transform() {
         input.onAppearTrigger
-            .sink { [weak self] primaryKey in
+            .sink { [weak self] _ in
                 guard let self else { return }
-                self.output.isFavorite = RealmRepository.shared.readSpecificFavorite(primaryKey)
+                self.output.isFavorite = RealmRepository.shared.readSpecificFavorite(output.movie.id)
             }
             .store(in: &cancellable)
         
         input.favoriteButtonClicked
-            .sink { [weak self] movie in
+            .sink { [weak self] _ in
                 guard let self else { return }
                 // 좋아요 취소
                 if self.output.isFavorite {
-                    RealmRepository.shared.deleteFromFavoriteList(movie.id)
+                    RealmRepository.shared.deleteFromFavoriteList(output.movie.id)
                     self.output.isFavorite = false
                 } else {
-                    let favoriteList = CommonMovieListManager.shared.commonListToRealmModel(movie)
+                    let favoriteList = CommonMovieListManager.shared.commonListToRealmModel(output.movie)
                     RealmRepository.shared.updateToFavoriteList(favoriteList)
                     self.output.isFavorite = true
                 }

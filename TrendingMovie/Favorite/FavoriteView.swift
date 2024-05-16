@@ -18,14 +18,14 @@ struct FavoriteView: View {
                 LazyVGrid(columns: gridColumns, spacing: 40) {
                     ForEach(viewModel.output.favoriteList, id: \.id) { movie in
                         NavigationLink {
-                            DetailView(movie: movie)
+                            DetailView(viewModel: DetailViewModel(movie: movie))
                         } label: {
                             VStack {
                                 PosterView(imageURL: movie.poster)
                                     .aspectRatio(0.7, contentMode: .fit)
                                     .clipShape(.rect(cornerRadius: 8))
                                     .padding(.bottom, 3)
-                                FavoriteInfoView(movie: movie)
+                                FavoriteInfoView(viewModel: ConfigureFavoriteViewModel(movie: movie))
                             }
                         }
                     }
