@@ -7,15 +7,15 @@
 
 import Foundation
 
-enum Router {
+enum TMDBRouter {
     case trendingMovie(timeWindow: TimeWindow)
     case genre
     case credit(movieID: Int)
 }
 
-extension Router: TargetType {
+extension TMDBRouter: TargetType {
     var baseURL: String {
-        return APIKey.baseURL
+        return APIKey.movieBaseURL
     }
     
     var method: HTTPMethod {

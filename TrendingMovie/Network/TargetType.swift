@@ -18,7 +18,7 @@ protocol TargetType {
 
 extension TargetType {
     func asURLRequest() -> URLRequest {
-        let url = URL(string: APIKey.baseURL)!
+        let url = URL(string: APIKey.movieBaseURL)!
         var urlRequest: URLRequest
         
         if let queryItems {
