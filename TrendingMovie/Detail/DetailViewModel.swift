@@ -47,7 +47,7 @@ extension DetailViewModel {
     
     private func fetchCastList(_ movieID: Int) async {
         do {
-            let result = try await NetworkManager.shared.requestToTmdbAPI(model: CreditModel.self, router: TMDBRouter.credit(movieID: movieID)).cast
+            let result = try await NetworkManager.shared.requestToAPI(model: CreditModel.self, router: TMDBRouter.credit(movieID: movieID)).cast
             await MainActor.run {
                 output.castList = result
             }

@@ -8,6 +8,7 @@
 import Foundation
 
 enum UserRouter {
+    case emailValidation(EmailQuery: Encodable)
     case join(JoinQuery: Encodable)
     case login(LoginQuery: Encodable)
     case authRefresh
@@ -20,13 +21,14 @@ extension UserRouter: TargetType {
     
     var method: HTTPMethod {
         switch self {
-        case .join, .login: .post
+        case .emailValidation, .join, .login: .post
         case .authRefresh: .get
         }
     }
     
     var path: String {
         switch self {
+        case .emailValidation: "/validation/email"
         case .join: "/users/join"
         case .login: "/users/login"
         case .authRefresh: "/auth/refresh"
@@ -46,7 +48,7 @@ extension UserRouter: TargetType {
         let encoder = JSONEncoder()
         
         switch self {
-        case .join(let query), .login(let query):
+        case .emailValidation(let query), .join(let query), .login(let query):
             encoder.keyEncodingStrategy = .convertToSnakeCase
             return try? encoder.encode(query)
         default: return nil

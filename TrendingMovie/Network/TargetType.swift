@@ -18,7 +18,7 @@ protocol TargetType {
 
 extension TargetType {
     func asURLRequest() -> URLRequest {
-        let url = URL(string: APIKey.movieBaseURL)!
+        let url = URL(string: baseURL)!
         var urlRequest: URLRequest
         
         if let queryItems {
@@ -29,6 +29,7 @@ extension TargetType {
         
         urlRequest.httpMethod = method.rawValue
         urlRequest.allHTTPHeaderFields = header
+        urlRequest.httpBody = body
         
         print(urlRequest)
         return urlRequest

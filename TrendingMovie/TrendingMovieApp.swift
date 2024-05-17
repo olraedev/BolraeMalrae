@@ -11,7 +11,7 @@ import SwiftUI
 struct TrendingMovieApp: App {
     var body: some Scene {
         WindowGroup {
-            MainTabView()
+            LoginView()
         }
     }
 }
