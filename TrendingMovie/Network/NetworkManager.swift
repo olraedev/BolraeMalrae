@@ -15,6 +15,10 @@ final class NetworkManager {
     func requestToAPI<D: Decodable, T: TargetType>(model: D.Type, router: T) async throws -> D {
         let (data, response) = try await URLSession.shared.data(for: router.asURLRequest())
         
+        if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+            print(response.statusCode)
+        }
+        
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
             print("invalidResponse")
             throw APIError.invalidResponse

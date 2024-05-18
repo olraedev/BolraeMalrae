@@ -9,9 +9,20 @@ import SwiftUI
 
 @main
 struct TrendingMovieApp: App {
+    
+    @StateObject private var appRootManager = AppRootManager()
+    
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            Group {
+                switch appRootManager.currentRoot {
+                case .login:
+                    LoginView()
+                case .home:
+                    MainTabView()
+                }
+            }
+            .environmentObject(appRootManager)
         }
     }
 }
