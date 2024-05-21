@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmailView: View {
     
-    @StateObject private var viewModel = JoinViewModel()
+    @StateObject private var viewModel = EmailViewModel()
     
     var body: some View {
         VStack(alignment: .leading) {

@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class JoinViewModel: ViewModelType {
+final class EmailViewModel: ViewModelType {
     
     var cancellable = Set<AnyCancellable>()
     
@@ -22,7 +22,7 @@ final class JoinViewModel: ViewModelType {
     }
 }
 
-extension JoinViewModel {
+extension EmailViewModel {
     struct Input {
         var textFieldText = CurrentValueSubject<String, Never>("")
         var validationButtonTrigger = PassthroughSubject<Void, Never>()
@@ -35,7 +35,7 @@ extension JoinViewModel {
     }
 }
 
-extension JoinViewModel {
+extension EmailViewModel {
     func transform() {
         input.textFieldText
             .map { [weak self] text in
@@ -70,7 +70,7 @@ extension JoinViewModel {
     }
 }
 
-extension JoinViewModel {
+extension EmailViewModel {
     private func checkEmailRegex(str: String) -> Bool {
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
         

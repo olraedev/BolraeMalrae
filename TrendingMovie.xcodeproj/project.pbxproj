@@ -50,9 +50,11 @@
 		EC93D3452BF790DF00CDB1D5 /* JoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93D3442BF790DF00CDB1D5 /* JoinModel.swift */; };
 		EC93D3482BF793BD00CDB1D5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93D3472BF793BD00CDB1D5 /* LoginView.swift */; };
 		ECF188C92BFC6CFB0090F423 /* AuthRefreshModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF188C82BFC6CFB0090F423 /* AuthRefreshModel.swift */; };
-		ECF188CB2BFC73280090F423 /* JoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF188CA2BFC73280090F423 /* JoinViewModel.swift */; };
+		ECF188CB2BFC73280090F423 /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF188CA2BFC73280090F423 /* EmailViewModel.swift */; };
 		ECF188CD2BFC7C7C0090F423 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF188CC2BFC7C7C0090F423 /* PasswordView.swift */; };
 		ECF188D12BFC7DCA0090F423 /* NextButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF188D02BFC7DCA0090F423 /* NextButtonView.swift */; };
+		ECF188D52BFC87B20090F423 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF188D42BFC87B20090F423 /* PasswordViewModel.swift */; };
+		ECF188D72BFC88E00090F423 /* NicknameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF188D62BFC88E00090F423 /* NicknameView.swift */; };
 		ECF8F4ED2BF86F2900C0B8E4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8F4EC2BF86F2900C0B8E4 /* CustomTextField.swift */; };
 		ECF8F4EF2BF873E400C0B8E4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8F4EE2BF873E400C0B8E4 /* LoginViewModel.swift */; };
 		ECF8F4F12BF875D700C0B8E4 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8F4F02BF875D700C0B8E4 /* LoginModel.swift */; };
@@ -137,9 +139,11 @@
 		EC93D3442BF790DF00CDB1D5 /* JoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinModel.swift; sourceTree = "<group>"; };
 		EC93D3472BF793BD00CDB1D5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ECF188C82BFC6CFB0090F423 /* AuthRefreshModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRefreshModel.swift; sourceTree = "<group>"; };
-		ECF188CA2BFC73280090F423 /* JoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewModel.swift; sourceTree = "<group>"; };
+		ECF188CA2BFC73280090F423 /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
 		ECF188CC2BFC7C7C0090F423 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		ECF188D02BFC7DCA0090F423 /* NextButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonView.swift; sourceTree = "<group>"; };
+		ECF188D42BFC87B20090F423 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
+		ECF188D62BFC88E00090F423 /* NicknameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameView.swift; sourceTree = "<group>"; };
 		ECF8F4EC2BF86F2900C0B8E4 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		ECF8F4EE2BF873E400C0B8E4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		ECF8F4F02BF875D700C0B8E4 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
@@ -392,9 +396,8 @@
 			isa = PBXGroup;
 			children = (
 				EC93D30C2BF6258500CDB1D5 /* SubViews */,
-				ECF8F4F62BF8924900C0B8E4 /* EmailView.swift */,
-				ECF188CC2BFC7C7C0090F423 /* PasswordView.swift */,
-				ECF188CA2BFC73280090F423 /* JoinViewModel.swift */,
+				ECF188D22BFC87820090F423 /* View */,
+				ECF188D32BFC87870090F423 /* ViewModel */,
 			);
 			path = Join;
 			sourceTree = "<group>";
@@ -414,6 +417,25 @@
 				ECF8F4EE2BF873E400C0B8E4 /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		ECF188D22BFC87820090F423 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECF8F4F62BF8924900C0B8E4 /* EmailView.swift */,
+				ECF188CC2BFC7C7C0090F423 /* PasswordView.swift */,
+				ECF188D62BFC88E00090F423 /* NicknameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECF188D32BFC87870090F423 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ECF188CA2BFC73280090F423 /* EmailViewModel.swift */,
+				ECF188D42BFC87B20090F423 /* PasswordViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		ECFAC2732BF0A26F00C1DC60 /* Detail */ = {
@@ -607,12 +629,14 @@
 				EC7A027A2BECCB370022C058 /* HTTPHeader.swift in Sources */,
 				EC7A028F2BECEDA60022C058 /* GenreModel.swift in Sources */,
 				ECF8F4F32BF876F800C0B8E4 /* UserDefaultsManager.swift in Sources */,
+				ECF188D72BFC88E00090F423 /* NicknameView.swift in Sources */,
 				ECF8F4F72BF8924900C0B8E4 /* EmailView.swift in Sources */,
 				ECF8F4F52BF87B5B00C0B8E4 /* AppRootManager.swift in Sources */,
 				ECFAC2892BF0C07900C1DC60 /* DetailViewModel.swift in Sources */,
 				ECF188D12BFC7DCA0090F423 /* NextButtonView.swift in Sources */,
 				EC7A02682BECC0950022C058 /* BackDropImageView.swift in Sources */,
 				EC93D3052BF5F9D400CDB1D5 /* LoginQuery.swift in Sources */,
+				ECF188D52BFC87B20090F423 /* PasswordViewModel.swift in Sources */,
 				EC93D3032BF5F9B200CDB1D5 /* JoinQuery.swift in Sources */,
 				ECFAC2782BF0A65C00C1DC60 /* GenreManager.swift in Sources */,
 				ECFAC2852BF0BF5800C1DC60 /* SectionHeaderView.swift in Sources */,
@@ -624,7 +648,7 @@
 				EC93D3102BF6312100CDB1D5 /* PointColorButtonView.swift in Sources */,
 				EC7A026A2BECC0E20022C058 /* VoteAverageView.swift in Sources */,
 				EC7A027D2BECCC7C0022C058 /* TMDBRouter.swift in Sources */,
-				ECF188CB2BFC73280090F423 /* JoinViewModel.swift in Sources */,
+				ECF188CB2BFC73280090F423 /* EmailViewModel.swift in Sources */,
 				ECFAC27F2BF0BDED00C1DC60 /* DetailHeaderView.swift in Sources */,
 				EC7899982BF35A45003C421E /* CommonMovieListManager.swift in Sources */,
 				EC7A02782BECCAE80022C058 /* HTTPMethod.swift in Sources */,
