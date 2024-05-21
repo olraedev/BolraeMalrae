@@ -38,7 +38,7 @@ struct LoginView: View {
                         }
                     }
                 NavigationLink {
-                    JoinView()
+                    EmailView()
                 } label: {
                     Text("아직 회원이 아니신가요?")
                         .font(.caption)
