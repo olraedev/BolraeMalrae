@@ -13,6 +13,10 @@ struct EmailView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
+            Text("이메일을 입력해주세요")
+                .padding(.top, 100)
+                .font(.title)
+                .bold()
             HStack {
                 CustomTextField(placeholder: "이메일", textFieldText: $viewModel.input.textFieldText.value)
                 Text("중복확인")
@@ -25,7 +29,6 @@ struct EmailView: View {
                     .foregroundStyle(.white)
                     .clipShape(.rect(cornerRadius: 10))
             }
-            .padding(.top, 100)
             Text(viewModel.output.validation ? (viewModel.output.emailValidation ? "사용가능한 이메일 입니다" : "중복 확인을 해주세요") : "이메일 형식을 확인해주세요")
                 .foregroundStyle(viewModel.output.emailValidation ? .customPrimary : .red)
                 .bold()
@@ -46,7 +49,7 @@ struct EmailView: View {
             NavigationLink {
                 PasswordView()
             } label: {
-                NextButtonView(validation: viewModel.output.emailValidation)
+                NextButtonView(title: "다음으로", validation: viewModel.output.emailValidation)
             }
             .disabled(!viewModel.output.emailValidation)
         }

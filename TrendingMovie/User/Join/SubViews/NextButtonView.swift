@@ -9,10 +9,11 @@ import SwiftUI
 
 struct NextButtonView: View {
     
+    var title: String
     var validation: Bool
     
     var body: some View {
-        Text("다음으로")
+        Text(title)
             .frame(maxWidth: .infinity)
             .frame(height: 50)
             .background(validation ? .customPrimary : .gray.opacity(0.2))

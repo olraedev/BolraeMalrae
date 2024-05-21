@@ -13,11 +13,14 @@ struct PasswordView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
+            Text("비밀번호를 입력해주세요")
+                .padding(.top, 100)
+                .font(.title)
+                .bold()
             SecureField(text: $viewModel.input.textFieldText.value) {
                 Text("비밀번호")
             }
             .textFieldStyle(.roundedBorder)
-            .padding(.top, 100)
             Text(viewModel.output.validation ? "사용 가능한 비밀번호 입니다." : "4자 이상 10자 미만")
                 .foregroundStyle(viewModel.output.validation ? .customPrimary : .red)
                 .bold()
@@ -36,7 +39,7 @@ struct PasswordView: View {
             NavigationLink {
                 NicknameView()
             } label: {
-                NextButtonView(validation: viewModel.output.validation)
+                NextButtonView(title: "다음으로", validation: viewModel.output.validation)
             }
             .disabled(!viewModel.output.validation)
         }
