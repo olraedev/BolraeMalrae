@@ -10,6 +10,8 @@ import SwiftUI
 struct NicknameView: View {
     
     @StateObject private var viewModel = NicknameViewModel()
+    @EnvironmentObject private var appRootManager: AppRootManager
+    @Binding var nicknameView: Bool
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -33,18 +35,22 @@ struct NicknameView: View {
             }
             .padding(.bottom, 8)
             .tint(.customPrimary)
-            NavigationLink {
-                NicknameView()
-            } label: {
-                NextButtonView(title: "완료", validation: viewModel.output.validation)
-            }
-            .disabled(!viewModel.output.validation)
+            NextButtonView(title: "완료", validation: viewModel.output.validation)
+                .wrapToButton {
+                    appRootManager.temp.nickname = viewModel.input.textFieldText.value
+                    viewModel.input.completeButtonClicked.send(appRootManager.temp)
+                }
+                .disabled(!viewModel.output.validation)
         }
         .padding(.horizontal, 16)
         .ignoresSafeArea(.keyboard)
+        .alert(viewModel.output.isComplete ? "회원가입 성공" : "회원가입 실패", isPresented: $viewModel.output.alertTrigger) {
+            Button {
+                nicknameView.toggle()
+            } label: {
+                Text("확인")
+            }
+            .environmentObject(appRootManager)
+        }
     }
-}
-
-#Preview {
-    NicknameView()
 }

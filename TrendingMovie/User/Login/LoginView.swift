@@ -37,14 +37,16 @@ struct LoginView: View {
                             Text("확인")
                         }
                     }
-                NavigationLink {
-                    EmailView()
-                } label: {
-                    Text("아직 회원이 아니신가요?")
-                        .font(.caption)
-                        .foregroundStyle(.customPrimary)
-                        .padding(.top, 8)
-                }
+                Text("아직 회원이 아니신가요?")
+                    .font(.caption)
+                    .foregroundStyle(.customPrimary)
+                    .padding(.top, 8)
+                    .wrapToButton {
+                        viewModel.input.isPresented.send(true)
+                    }
+                    .fullScreenCover(isPresented: $viewModel.output.isPresented) {
+                        EmailView(emailView: $viewModel.output.isPresented)
+                    }
                 Spacer()
             }
             .padding()

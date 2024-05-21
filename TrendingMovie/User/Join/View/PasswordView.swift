@@ -10,6 +10,8 @@ import SwiftUI
 struct PasswordView: View {
     
     @StateObject private var viewModel = PasswordViewModel()
+    @EnvironmentObject private var appRootManager: AppRootManager
+    @Binding var passwordView: Bool
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -37,17 +39,17 @@ struct PasswordView: View {
             .padding(.bottom, 8)
             .tint(.customPrimary)
             NavigationLink {
-                NicknameView()
+                NicknameView(nicknameView: $passwordView)
             } label: {
                 NextButtonView(title: "다음으로", validation: viewModel.output.validation)
             }
             .disabled(!viewModel.output.validation)
+            .simultaneousGesture(TapGesture().onEnded { _ in
+                appRootManager.temp.password = viewModel.input.textFieldText.value
+            })
+            .environmentObject(appRootManager)
         }
         .padding(.horizontal, 16)
         .ignoresSafeArea(.keyboard)
     }
-}
-
-#Preview {
-    PasswordView()
 }

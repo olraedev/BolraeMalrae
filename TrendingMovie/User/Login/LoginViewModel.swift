@@ -27,10 +27,12 @@ extension LoginViewModel {
         var email = CurrentValueSubject<String, Never>("")
         var password = CurrentValueSubject<String, Never>("")
         let loginButtonClicked = PassthroughSubject<Void, Never>()
+        var isPresented = PassthroughSubject<Bool, Never>()
     }
     
     struct Output {
         var isEnableLogin = false
+        var isPresented = false
     }
 }
 
@@ -56,6 +58,12 @@ extension LoginViewModel {
                         self.output.isEnableLogin = true
                     }
                 }
+            }
+            .store(in: &cancellable)
+        
+        input.isPresented
+            .sink { _ in
+                self.output.isPresented = true
             }
             .store(in: &cancellable)
     }
