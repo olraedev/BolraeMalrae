@@ -36,8 +36,15 @@ extension UserRouter: TargetType {
     }
     
     var header: [String : String] {
-        return [HTTPHeader.contentType.rawValue: HTTPHeader.json.rawValue,
-                HTTPHeader.sesacKey.rawValue: APIKey.secretKey]
+        switch self {
+        case .authRefresh:
+            return [HTTPHeader.contentType.rawValue: HTTPHeader.json.rawValue,
+                    HTTPHeader.sesacKey.rawValue: APIKey.secretKey,
+                    HTTPHeader.refresh.rawValue: UserDefaultsManager.refreshToken]
+        default:
+            return [HTTPHeader.contentType.rawValue: HTTPHeader.json.rawValue,
+                    HTTPHeader.sesacKey.rawValue: APIKey.secretKey]
+        }
     }
     
     var queryItems: [URLQueryItem]? {

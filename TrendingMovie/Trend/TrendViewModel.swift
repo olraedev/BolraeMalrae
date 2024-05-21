@@ -38,7 +38,6 @@ extension TrendViewModel {
             .sink { [weak self] _ in
                 guard let self = self else { return }
                 Task {
-                    await self.fetchMoviesGenre()
                     await self.fetchTrendingMovie(timeWindow: .day)
                 }
             }
@@ -62,17 +61,6 @@ extension TrendViewModel {
             }
         } catch {
             output.trendingMovieList = []
-        }
-    }
-    
-    private func fetchMoviesGenre() async {
-        do {
-            let result = try await NetworkManager.shared.requestToAPI(model: GenreModel.self, router: TMDBRouter.genre).genres
-            await MainActor.run {
-                GenreManager.shared.configureGenres(result)
-            }
-        } catch {
-            
         }
     }
 }

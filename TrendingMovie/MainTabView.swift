@@ -30,6 +30,22 @@ struct MainTabView: View {
         }
         .toolbarBackground(.white, for: .tabBar)
         .tint(.customPrimary)
+        .task {
+            Task {
+                await fetchMoviesGenre()
+            }
+        }
+    }
+    
+    private func fetchMoviesGenre() async {
+        do {
+            let result = try await NetworkManager.shared.requestToAPI(model: GenreModel.self, router: TMDBRouter.genre).genres
+            await MainActor.run {
+                GenreManager.shared.configureGenres(result)
+            }
+        } catch {
+            
+        }
     }
 }
 
