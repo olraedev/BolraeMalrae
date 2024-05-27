@@ -26,8 +26,11 @@ struct TrendHeaderView: View {
     
     private func findGenre() -> some View {
         ForEach(genre, id: \.self) { genre in
-            Text("#\(GenreManager.shared.genres[genre] ?? "없음")")
-                .bold()
+            if let text = GenreManager.shared.genres[genre] {
+                Text("#\(text)").bold()
+            } else {
+                Text("")
+            }
         }
     }
 }

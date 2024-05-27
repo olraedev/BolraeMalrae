@@ -16,12 +16,6 @@ struct MainTabView: View {
                     icon: { Image(systemName: "house") }
                 )}
             
-            CommunityView()
-                .tabItem { Label(
-                    title: { Text("커뮤니티") },
-                    icon: { Image(systemName: "ellipsis.message") }
-                )}
-            
             FavoriteView()
                 .tabItem { Label(
                     title: { Text("즐겨찾기") },

@@ -38,7 +38,7 @@ extension TrendViewModel {
             .sink { [weak self] _ in
                 guard let self = self else { return }
                 Task {
-                    await self.fetchTrendingMovie(timeWindow: .day)
+                    await self.fetchTrendingMovie(timeWindow: self.input.selected.value)
                 }
             }
             .store(in: &cancellable)

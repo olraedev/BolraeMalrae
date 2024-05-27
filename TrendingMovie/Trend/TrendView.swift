@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TrendView: View {
     
-    @ObservedObject var viewModel = TrendViewModel()
+    @StateObject var viewModel = TrendViewModel()
     
     var body: some View {
         NavigationStack {

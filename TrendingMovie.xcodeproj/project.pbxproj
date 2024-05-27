@@ -40,28 +40,8 @@
 		EC7A028A2BECDAEE0022C058 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A02892BECDAEE0022C058 /* ViewModelType.swift */; };
 		EC7A028D2BECDC430022C058 /* TrendingMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A028C2BECDC430022C058 /* TrendingMovieModel.swift */; };
 		EC7A028F2BECEDA60022C058 /* GenreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7A028E2BECEDA60022C058 /* GenreModel.swift */; };
-		EC93D2FC2BF5F6A900CDB1D5 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93D2FB2BF5F6A900CDB1D5 /* CommunityView.swift */; };
-		EC93D2FF2BF5F96A00CDB1D5 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93D2FE2BF5F96A00CDB1D5 /* UserRouter.swift */; };
-		EC93D3032BF5F9B200CDB1D5 /* JoinQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93D3022BF5F9B200CDB1D5 /* JoinQuery.swift */; };
-		EC93D3052BF5F9D400CDB1D5 /* LoginQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93D3042BF5F9D400CDB1D5 /* LoginQuery.swift */; };
 		EC93D3102BF6312100CDB1D5 /* PointColorButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93D30F2BF6312100CDB1D5 /* PointColorButtonView.swift */; };
-		EC93D3402BF7834A00CDB1D5 /* EmailQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93D33F2BF7834A00CDB1D5 /* EmailQuery.swift */; };
-		EC93D3422BF7839A00CDB1D5 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93D3412BF7839A00CDB1D5 /* MessageModel.swift */; };
-		EC93D3452BF790DF00CDB1D5 /* JoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93D3442BF790DF00CDB1D5 /* JoinModel.swift */; };
-		EC93D3482BF793BD00CDB1D5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93D3472BF793BD00CDB1D5 /* LoginView.swift */; };
-		ECF188C92BFC6CFB0090F423 /* AuthRefreshModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF188C82BFC6CFB0090F423 /* AuthRefreshModel.swift */; };
-		ECF188CB2BFC73280090F423 /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF188CA2BFC73280090F423 /* EmailViewModel.swift */; };
-		ECF188CD2BFC7C7C0090F423 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF188CC2BFC7C7C0090F423 /* PasswordView.swift */; };
-		ECF188D12BFC7DCA0090F423 /* NextButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF188D02BFC7DCA0090F423 /* NextButtonView.swift */; };
-		ECF188D52BFC87B20090F423 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF188D42BFC87B20090F423 /* PasswordViewModel.swift */; };
-		ECF188D72BFC88E00090F423 /* NicknameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF188D62BFC88E00090F423 /* NicknameView.swift */; };
-		ECF188D92BFC89510090F423 /* NicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF188D82BFC89510090F423 /* NicknameViewModel.swift */; };
-		ECF8F4ED2BF86F2900C0B8E4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8F4EC2BF86F2900C0B8E4 /* CustomTextField.swift */; };
-		ECF8F4EF2BF873E400C0B8E4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8F4EE2BF873E400C0B8E4 /* LoginViewModel.swift */; };
-		ECF8F4F12BF875D700C0B8E4 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8F4F02BF875D700C0B8E4 /* LoginModel.swift */; };
 		ECF8F4F32BF876F800C0B8E4 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8F4F22BF876F800C0B8E4 /* UserDefaultsManager.swift */; };
-		ECF8F4F52BF87B5B00C0B8E4 /* AppRootManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8F4F42BF87B5B00C0B8E4 /* AppRootManager.swift */; };
-		ECF8F4F72BF8924900C0B8E4 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8F4F62BF8924900C0B8E4 /* EmailView.swift */; };
 		ECFAC2752BF0A28700C1DC60 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC2742BF0A28700C1DC60 /* DetailView.swift */; };
 		ECFAC2782BF0A65C00C1DC60 /* GenreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC2772BF0A65C00C1DC60 /* GenreManager.swift */; };
 		ECFAC27C2BF0B6E400C1DC60 /* VerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAC27B2BF0B6E400C1DC60 /* VerticalLine.swift */; };
@@ -129,29 +109,9 @@
 		EC7A02892BECDAEE0022C058 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		EC7A028C2BECDC430022C058 /* TrendingMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovieModel.swift; sourceTree = "<group>"; };
 		EC7A028E2BECEDA60022C058 /* GenreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreModel.swift; sourceTree = "<group>"; };
-		EC93D2FB2BF5F6A900CDB1D5 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
-		EC93D2FE2BF5F96A00CDB1D5 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
-		EC93D3022BF5F9B200CDB1D5 /* JoinQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinQuery.swift; sourceTree = "<group>"; };
-		EC93D3042BF5F9D400CDB1D5 /* LoginQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginQuery.swift; sourceTree = "<group>"; };
 		EC93D30F2BF6312100CDB1D5 /* PointColorButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointColorButtonView.swift; sourceTree = "<group>"; };
-		EC93D33F2BF7834A00CDB1D5 /* EmailQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailQuery.swift; sourceTree = "<group>"; };
-		EC93D3412BF7839A00CDB1D5 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		EC93D3432BF7851800CDB1D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		EC93D3442BF790DF00CDB1D5 /* JoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinModel.swift; sourceTree = "<group>"; };
-		EC93D3472BF793BD00CDB1D5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		ECF188C82BFC6CFB0090F423 /* AuthRefreshModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRefreshModel.swift; sourceTree = "<group>"; };
-		ECF188CA2BFC73280090F423 /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
-		ECF188CC2BFC7C7C0090F423 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
-		ECF188D02BFC7DCA0090F423 /* NextButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonView.swift; sourceTree = "<group>"; };
-		ECF188D42BFC87B20090F423 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
-		ECF188D62BFC88E00090F423 /* NicknameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameView.swift; sourceTree = "<group>"; };
-		ECF188D82BFC89510090F423 /* NicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewModel.swift; sourceTree = "<group>"; };
-		ECF8F4EC2BF86F2900C0B8E4 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		ECF8F4EE2BF873E400C0B8E4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		ECF8F4F02BF875D700C0B8E4 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		ECF8F4F22BF876F800C0B8E4 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
-		ECF8F4F42BF87B5B00C0B8E4 /* AppRootManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootManager.swift; sourceTree = "<group>"; };
-		ECF8F4F62BF8924900C0B8E4 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		ECFAC2742BF0A28700C1DC60 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		ECFAC2772BF0A65C00C1DC60 /* GenreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreManager.swift; sourceTree = "<group>"; };
 		ECFAC27B2BF0B6E400C1DC60 /* VerticalLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLine.swift; sourceTree = "<group>"; };
@@ -239,10 +199,8 @@
 				EC7A02702BECC5D30022C058 /* Network */,
 				EC78998D2BF340F7003C421E /* Realm */,
 				EC7A025C2BECA96D0022C058 /* Custom */,
-				EC93D3062BF61D8100CDB1D5 /* User */,
 				EC7A02592BECA6FF0022C058 /* Trend */,
 				ECFAC2732BF0A26F00C1DC60 /* Detail */,
-				EC93D2FA2BF5F66E00CDB1D5 /* Community */,
 				ECFAC2922BF10C9100C1DC60 /* Favorite */,
 				EC7A022F2BECA6DA0022C058 /* TrendingMovieApp.swift */,
 				ECFAC2902BF1080800C1DC60 /* MainTabView.swift */,
@@ -296,7 +254,6 @@
 				EC7A02672BECC0950022C058 /* BackDropImageView.swift */,
 				ECFAC27B2BF0B6E400C1DC60 /* VerticalLine.swift */,
 				EC93D30F2BF6312100CDB1D5 /* PointColorButtonView.swift */,
-				ECF8F4EC2BF86F2900C0B8E4 /* CustomTextField.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -323,7 +280,6 @@
 				EC7A02712BECC5EE0022C058 /* TargetType.swift */,
 				EC7A02802BECCE1B0022C058 /* NetworkManager.swift */,
 				ECFAC28D2BF0C1EA00C1DC60 /* TMDBRouter */,
-				EC93D2FD2BF5F94D00CDB1D5 /* UserRouter */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -346,101 +302,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		EC93D2FA2BF5F66E00CDB1D5 /* Community */ = {
-			isa = PBXGroup;
-			children = (
-				EC93D2FB2BF5F6A900CDB1D5 /* CommunityView.swift */,
-			);
-			path = Community;
-			sourceTree = "<group>";
-		};
-		EC93D2FD2BF5F94D00CDB1D5 /* UserRouter */ = {
-			isa = PBXGroup;
-			children = (
-				EC93D2FE2BF5F96A00CDB1D5 /* UserRouter.swift */,
-				EC93D3002BF5F98900CDB1D5 /* Query */,
-				EC93D3012BF5F99500CDB1D5 /* Model */,
-			);
-			path = UserRouter;
-			sourceTree = "<group>";
-		};
-		EC93D3002BF5F98900CDB1D5 /* Query */ = {
-			isa = PBXGroup;
-			children = (
-				EC93D33F2BF7834A00CDB1D5 /* EmailQuery.swift */,
-				EC93D3022BF5F9B200CDB1D5 /* JoinQuery.swift */,
-				EC93D3042BF5F9D400CDB1D5 /* LoginQuery.swift */,
-			);
-			path = Query;
-			sourceTree = "<group>";
-		};
-		EC93D3012BF5F99500CDB1D5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EC93D3412BF7839A00CDB1D5 /* MessageModel.swift */,
-				EC93D3442BF790DF00CDB1D5 /* JoinModel.swift */,
-				ECF8F4F02BF875D700C0B8E4 /* LoginModel.swift */,
-				ECF188C82BFC6CFB0090F423 /* AuthRefreshModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		EC93D3062BF61D8100CDB1D5 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				EC93D3092BF620C800CDB1D5 /* Join */,
-				EC93D3462BF793A500CDB1D5 /* Login */,
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
-		EC93D3092BF620C800CDB1D5 /* Join */ = {
-			isa = PBXGroup;
-			children = (
-				EC93D30C2BF6258500CDB1D5 /* SubViews */,
-				ECF188D22BFC87820090F423 /* View */,
-				ECF188D32BFC87870090F423 /* ViewModel */,
-			);
-			path = Join;
-			sourceTree = "<group>";
-		};
-		EC93D30C2BF6258500CDB1D5 /* SubViews */ = {
-			isa = PBXGroup;
-			children = (
-				ECF188D02BFC7DCA0090F423 /* NextButtonView.swift */,
-			);
-			path = SubViews;
-			sourceTree = "<group>";
-		};
-		EC93D3462BF793A500CDB1D5 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				EC93D3472BF793BD00CDB1D5 /* LoginView.swift */,
-				ECF8F4EE2BF873E400C0B8E4 /* LoginViewModel.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		ECF188D22BFC87820090F423 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				ECF8F4F62BF8924900C0B8E4 /* EmailView.swift */,
-				ECF188CC2BFC7C7C0090F423 /* PasswordView.swift */,
-				ECF188D62BFC88E00090F423 /* NicknameView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		ECF188D32BFC87870090F423 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				ECF188CA2BFC73280090F423 /* EmailViewModel.swift */,
-				ECF188D42BFC87B20090F423 /* PasswordViewModel.swift */,
-				ECF188D82BFC89510090F423 /* NicknameViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		ECFAC2732BF0A26F00C1DC60 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,7 +318,6 @@
 				ECFAC2772BF0A65C00C1DC60 /* GenreManager.swift */,
 				EC7899972BF35A45003C421E /* CommonMovieListManager.swift */,
 				ECF8F4F22BF876F800C0B8E4 /* UserDefaultsManager.swift */,
-				ECF8F4F42BF87B5B00C0B8E4 /* AppRootManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -632,59 +492,39 @@
 				EC7A027A2BECCB370022C058 /* HTTPHeader.swift in Sources */,
 				EC7A028F2BECEDA60022C058 /* GenreModel.swift in Sources */,
 				ECF8F4F32BF876F800C0B8E4 /* UserDefaultsManager.swift in Sources */,
-				ECF188D72BFC88E00090F423 /* NicknameView.swift in Sources */,
-				ECF8F4F72BF8924900C0B8E4 /* EmailView.swift in Sources */,
-				ECF8F4F52BF87B5B00C0B8E4 /* AppRootManager.swift in Sources */,
 				ECFAC2892BF0C07900C1DC60 /* DetailViewModel.swift in Sources */,
-				ECF188D12BFC7DCA0090F423 /* NextButtonView.swift in Sources */,
 				EC7A02682BECC0950022C058 /* BackDropImageView.swift in Sources */,
-				EC93D3052BF5F9D400CDB1D5 /* LoginQuery.swift in Sources */,
-				ECF188D52BFC87B20090F423 /* PasswordViewModel.swift in Sources */,
-				EC93D3032BF5F9B200CDB1D5 /* JoinQuery.swift in Sources */,
 				ECFAC2782BF0A65C00C1DC60 /* GenreManager.swift in Sources */,
 				ECFAC2852BF0BF5800C1DC60 /* SectionHeaderView.swift in Sources */,
 				EC7A02852BECDA470022C058 /* TimeWindow.swift in Sources */,
 				EC7A02602BECAA2D0022C058 /* ButtonWrapper.swift in Sources */,
-				EC93D3482BF793BD00CDB1D5 /* LoginView.swift in Sources */,
 				ECFAC2942BF10CA400C1DC60 /* FavoriteView.swift in Sources */,
-				EC93D3452BF790DF00CDB1D5 /* JoinModel.swift in Sources */,
 				EC93D3102BF6312100CDB1D5 /* PointColorButtonView.swift in Sources */,
 				EC7A026A2BECC0E20022C058 /* VoteAverageView.swift in Sources */,
 				EC7A027D2BECCC7C0022C058 /* TMDBRouter.swift in Sources */,
-				ECF188CB2BFC73280090F423 /* EmailViewModel.swift in Sources */,
 				ECFAC27F2BF0BDED00C1DC60 /* DetailHeaderView.swift in Sources */,
 				EC7899982BF35A45003C421E /* CommonMovieListManager.swift in Sources */,
 				EC7A02782BECCAE80022C058 /* HTTPMethod.swift in Sources */,
 				EC7A02722BECC5EE0022C058 /* TargetType.swift in Sources */,
-				ECF8F4ED2BF86F2900C0B8E4 /* CustomTextField.swift in Sources */,
 				EC7A028A2BECDAEE0022C058 /* ViewModelType.swift in Sources */,
 				ECFAC28F2BF0C27D00C1DC60 /* CreditModel.swift in Sources */,
 				ECFAC2752BF0A28700C1DC60 /* DetailView.swift in Sources */,
 				EC7899962BF3530B003C421E /* RealmRepository.swift in Sources */,
-				ECF188D92BFC89510090F423 /* NicknameViewModel.swift in Sources */,
-				EC93D2FF2BF5F96A00CDB1D5 /* UserRouter.swift in Sources */,
 				ECFAC2912BF1080800C1DC60 /* MainTabView.swift in Sources */,
 				ECFAC27C2BF0B6E400C1DC60 /* VerticalLine.swift in Sources */,
 				EC7A02762BECC75B0022C058 /* APIKey.swift in Sources */,
 				ECFAC2812BF0BE4000C1DC60 /* PosterView.swift in Sources */,
-				EC93D3402BF7834A00CDB1D5 /* EmailQuery.swift in Sources */,
 				EC7A02832BECCF200022C058 /* APIError.swift in Sources */,
-				ECF188C92BFC6CFB0090F423 /* AuthRefreshModel.swift in Sources */,
 				EC78999C2BF38691003C421E /* ConfigureFavoriteViewModel.swift in Sources */,
 				EC7A02662BECBC3E0022C058 /* TrendHeaderView.swift in Sources */,
-				ECF8F4EF2BF873E400C0B8E4 /* LoginViewModel.swift in Sources */,
-				ECF8F4F12BF875D700C0B8E4 /* LoginModel.swift in Sources */,
 				EC7A025B2BECA7120022C058 /* TrendView.swift in Sources */,
 				EC7A02812BECCE1B0022C058 /* NetworkManager.swift in Sources */,
-				ECF188CD2BFC7C7C0090F423 /* PasswordView.swift in Sources */,
 				EC7A02872BECDAC30022C058 /* TrendViewModel.swift in Sources */,
 				EC7A026C2BECC1FE0022C058 /* TrendFooterView.swift in Sources */,
 				EC7A028D2BECDC430022C058 /* TrendingMovieModel.swift in Sources */,
 				EC7A026E2BECC2460022C058 /* TrendCellView.swift in Sources */,
-				EC93D2FC2BF5F6A900CDB1D5 /* CommunityView.swift in Sources */,
 				EC7899902BF34956003C421E /* FavoriteInfoView.swift in Sources */,
 				EC7899922BF34FAE003C421E /* FavoriteViewModel.swift in Sources */,
-				EC93D3422BF7839A00CDB1D5 /* MessageModel.swift in Sources */,
 				EC7899942BF350C7003C421E /* FavoriteModel.swift in Sources */,
 				EC7A02302BECA6DA0022C058 /* TrendingMovieApp.swift in Sources */,
 				ECFAC2832BF0BEFE00C1DC60 /* OverviewView.swift in Sources */,
