@@ -21,7 +21,7 @@ struct DetailHeaderView: View {
                 .clipShape(.rect(cornerRadius: 8))
                 .frame(width: 90, height: 130)
                 .padding(.trailing, 16)
-                .padding(.bottom, 8)
+                .padding(.bottom, 24)
         }
     }
 }

@@ -6,27 +6,26 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct BackDropImageView: View {
     
     let imageURL: String
     
     var body: some View {
-        AsyncImage(url: URL(string: imageURL)) { data in
-            switch data {
-            case .empty:
+        KFImage.url(URL(string: imageURL))
+            .cancelOnDisappear(true)
+            .resizable()
+            .cacheMemoryOnly()
+            .fade(duration: 0.25)
+            .placeholder { _ in
                 ProgressView()
-                    .frame(maxWidth: .infinity)
-            case .success(let image):
-                image
-                    .resizable()
-                    .frame(maxWidth: .infinity)
-            default:
-                Rectangle()
-                    .frame(maxWidth: .infinity)
-                    .background(.white)
             }
-        }
+            .scaledToFit()
+            .frame(maxWidth: .infinity)
+            .onDisappear {
+                ImageCache.default.clearMemoryCache()
+            }
     }
     
     init(imageURL: String) {

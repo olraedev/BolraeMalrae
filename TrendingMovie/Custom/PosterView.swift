@@ -6,24 +6,26 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct PosterView: View {
     
     let imageURL: String
     
     var body: some View {
-        AsyncImage(url: URL(string: imageURL)) { data in
-            switch data {
-            case .empty:
+        KFImage.url(URL(string: imageURL))
+            .cancelOnDisappear(true)
+            .resizable()
+            .cacheMemoryOnly()
+            .fade(duration: 0.25)
+            .placeholder { _ in
                 ProgressView()
-            case .success(let image):
-                image
-                    .resizable()
-            default:
-                Rectangle()
-                    .background(.white)
             }
-        }
+            .scaledToFit()
+            .frame(maxWidth: .infinity)
+            .onDisappear {
+                ImageCache.default.clearMemoryCache()
+            }
     }
     
     init(imageURL: String) {
