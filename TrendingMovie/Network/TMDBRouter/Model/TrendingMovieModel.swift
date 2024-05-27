@@ -20,6 +20,7 @@ struct TrendingMovieResult: Hashable, Decodable {
     let genres: [Int]
     let releaseDate: String
     let voteAverage: Double
+    let originalTitle: String
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -30,5 +31,6 @@ struct TrendingMovieResult: Hashable, Decodable {
         case genres = "genre_ids"
         case releaseDate = "release_date"
         case voteAverage = "vote_average"
+        case originalTitle = "original_title"
     }
 }

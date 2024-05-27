@@ -17,8 +17,9 @@ final class FavoriteModel: Object {
     @Persisted var genres: List<Int>
     @Persisted var releaseDate: String
     @Persisted var voteAverage: Double
+    @Persisted var originalTitle: String
     
-    convenience init(id: Int, title: String, overview: String, backdrop: String, poster: String, genres: [Int], releaseDate: String, voteAverage: Double) {
+    convenience init(id: Int, title: String, overview: String, backdrop: String, poster: String, genres: [Int], releaseDate: String, voteAverage: Double, originalTitle: String) {
         self.init()
         self.id = id
         self.title = title
@@ -28,5 +29,6 @@ final class FavoriteModel: Object {
         self.genres.append(objectsIn: genres)
         self.releaseDate = releaseDate
         self.voteAverage = voteAverage
+        self.originalTitle = originalTitle
     }
 }

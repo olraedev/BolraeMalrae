@@ -21,7 +21,6 @@ struct BackDropImageView: View {
             .placeholder { _ in
                 ProgressView()
             }
-            .scaledToFit()
             .frame(maxWidth: .infinity)
             .onDisappear {
                 ImageCache.default.clearMemoryCache()

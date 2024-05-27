@@ -17,31 +17,32 @@ struct DetailView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
-                DetailHeaderView(backdrop: viewModel.output.movie.backdrop, poster: viewModel.output.movie.poster)
-                
-                Section {
-                    OverviewView(overView: viewModel.output.movie.overview)
-                } header: {
-                    SectionHeaderView(title: "Overview")
-                }
-                .padding(.horizontal, 16)
-                
-                Section {
-                    ForEach(viewModel.output.castList, id: \.id) { cast in
-                        CastView(profile: cast.profile ?? "", name: cast.name, character: cast.character)
+            ScrollView(.vertical) {
+                LazyVStack {
+                    DetailHeaderView(viewModel: ConfigureFavoriteViewModel(movie: viewModel.output.movie))
+                    
+                    Section {
+                        OverviewView(overView: viewModel.output.movie.overview)
+                    } header: {
+                        SectionHeaderView(title: "Overview")
                     }
-                    .overlay(alignment: .top) {
-                        Divider()
+                    .padding(.horizontal, 16)
+                    
+                    Section {
+                        ForEach(viewModel.output.castList, id: \.id) { cast in
+                            CastView(profile: cast.profile ?? "", name: cast.name, character: cast.character)
+                        }
+                        .overlay(alignment: .top) {
+                            Divider()
+                        }
+                    } header: {
+                        SectionHeaderView(title: "Cast")
                     }
-                } header: {
-                    SectionHeaderView(title: "Cast")
+                    .padding(.horizontal, 16)
                 }
-                .padding(.horizontal, 16)
-
             } // ScrollView
-            .navigationTitle(viewModel.output.movie.title)
-            .navigationBarTitleDisplayMode(.inline)
+            .toolbar(.hidden, for: .navigationBar)
+            .ignoresSafeArea(.container, edges: .top)
         } // NavigationStack
         .task {
             viewModel.input.viewOnAppear.send(viewModel.output.movie.id)

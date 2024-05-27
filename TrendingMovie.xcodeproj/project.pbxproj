@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EC45DC972C0458E6009ADA5C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EC45DC962C0458E6009ADA5C /* Kingfisher */; };
-		EC78998C2BF340C6003C421E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EC78998B2BF340C6003C421E /* RealmSwift */; };
+		EC45DC982C048F22009ADA5C /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = EC78998B2BF340C6003C421E /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		EC78998C2BF340C6003C421E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EC78998B2BF340C6003C421E /* RealmSwift */; settings = {ATTRIBUTES = (Required, ); }; };
 		EC7899902BF34956003C421E /* FavoriteInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78998F2BF34956003C421E /* FavoriteInfoView.swift */; };
 		EC7899922BF34FAE003C421E /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7899912BF34FAE003C421E /* FavoriteViewModel.swift */; };
 		EC7899942BF350C7003C421E /* FavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7899932BF350C7003C421E /* FavoriteModel.swift */; };
@@ -73,6 +74,20 @@
 			remoteInfo = TrendingMovie;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EC45DC992C048F22009ADA5C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EC45DC982C048F22009ADA5C /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EC78998F2BF34956003C421E /* FavoriteInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInfoView.swift; sourceTree = "<group>"; };
@@ -372,6 +387,7 @@
 				EC7A02282BECA6DA0022C058 /* Sources */,
 				EC7A02292BECA6DA0022C058 /* Frameworks */,
 				EC7A022A2BECA6DA0022C058 /* Resources */,
+				EC45DC992C048F22009ADA5C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -704,6 +720,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrendingMovie/Preview Content\"";
+				DEVELOPMENT_TEAM = 9G88QGSLX7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrendingMovie/Info.plist;
@@ -738,6 +755,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrendingMovie/Preview Content\"";
+				DEVELOPMENT_TEAM = 9G88QGSLX7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrendingMovie/Info.plist;
