@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CommonMovieList {
+struct CommonMovieList: Hashable {
     let id: Int
     let title: String
     let overview: String

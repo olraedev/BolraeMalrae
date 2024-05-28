@@ -16,6 +16,12 @@ struct MainTabView: View {
                     icon: { Image(systemName: "house") }
                 )}
             
+            SearchView()
+                .tabItem { Label(
+                    title: { Text("검색") },
+                    icon: { Image(systemName: "magnifyingglass") }
+                )}
+            
             FavoriteView()
                 .tabItem { Label(
                     title: { Text("즐겨찾기") },

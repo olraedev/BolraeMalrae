@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EC45DC972C0458E6009ADA5C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EC45DC962C0458E6009ADA5C /* Kingfisher */; };
 		EC45DC982C048F22009ADA5C /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = EC78998B2BF340C6003C421E /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		EC45DC9C2C05F599009ADA5C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC45DC9B2C05F599009ADA5C /* SearchView.swift */; };
+		EC45DC9E2C05F786009ADA5C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC45DC9D2C05F786009ADA5C /* SearchViewModel.swift */; };
 		EC78998C2BF340C6003C421E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EC78998B2BF340C6003C421E /* RealmSwift */; settings = {ATTRIBUTES = (Required, ); }; };
 		EC7899902BF34956003C421E /* FavoriteInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78998F2BF34956003C421E /* FavoriteInfoView.swift */; };
 		EC7899922BF34FAE003C421E /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7899912BF34FAE003C421E /* FavoriteViewModel.swift */; };
@@ -90,6 +92,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EC45DC9B2C05F599009ADA5C /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		EC45DC9D2C05F786009ADA5C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		EC78998F2BF34956003C421E /* FavoriteInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInfoView.swift; sourceTree = "<group>"; };
 		EC7899912BF34FAE003C421E /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		EC7899932BF350C7003C421E /* FavoriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModel.swift; sourceTree = "<group>"; };
@@ -176,6 +180,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EC45DC9A2C05F581009ADA5C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				EC45DC9B2C05F599009ADA5C /* SearchView.swift */,
+				EC45DC9D2C05F786009ADA5C /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		EC78998D2BF340F7003C421E /* Realm */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +240,7 @@
 				EC7A02592BECA6FF0022C058 /* Trend */,
 				ECFAC2732BF0A26F00C1DC60 /* Detail */,
 				ECFAC2922BF10C9100C1DC60 /* Favorite */,
+				EC45DC9A2C05F581009ADA5C /* Search */,
 				EC7A022F2BECA6DA0022C058 /* TrendingMovieApp.swift */,
 				ECFAC2902BF1080800C1DC60 /* MainTabView.swift */,
 				EC7A02332BECA6DD0022C058 /* Assets.xcassets */,
@@ -527,6 +541,7 @@
 				EC7A02852BECDA470022C058 /* TimeWindow.swift in Sources */,
 				EC7A02602BECAA2D0022C058 /* ButtonWrapper.swift in Sources */,
 				ECFAC2942BF10CA400C1DC60 /* FavoriteView.swift in Sources */,
+				EC45DC9C2C05F599009ADA5C /* SearchView.swift in Sources */,
 				EC93D3102BF6312100CDB1D5 /* PointColorButtonView.swift in Sources */,
 				EC7A026A2BECC0E20022C058 /* VoteAverageView.swift in Sources */,
 				EC7A027D2BECCC7C0022C058 /* TMDBRouter.swift in Sources */,
@@ -552,6 +567,7 @@
 				EC7A028D2BECDC430022C058 /* TrendingMovieModel.swift in Sources */,
 				EC7A026E2BECC2460022C058 /* TrendCellView.swift in Sources */,
 				EC7899902BF34956003C421E /* FavoriteInfoView.swift in Sources */,
+				EC45DC9E2C05F786009ADA5C /* SearchViewModel.swift in Sources */,
 				EC7899922BF34FAE003C421E /* FavoriteViewModel.swift in Sources */,
 				EC7899942BF350C7003C421E /* FavoriteModel.swift in Sources */,
 				EC7A02302BECA6DA0022C058 /* TrendingMovieApp.swift in Sources */,
@@ -724,6 +740,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrendingMovie/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BolraeMalrae;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -759,6 +776,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrendingMovie/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BolraeMalrae;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
